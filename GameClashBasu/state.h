@@ -1,26 +1,26 @@
 #ifndef STATE_H
 #define STATE_H
-#include <vector>
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/System.hpp>
-#include <iostream>
-#include <map>
-#include <stack>
+#include "giant.h"
 class State
 {
 private:
+
+protected:
+    std::stack<State*>* states;
     std::vector<sf::Texture> textures;
     sf::RenderWindow* window;
     bool quit;
-protected:
+    std::map<std::string, int> * SupportedKeys;
+    sf::Vector2i MousePositionScreen;
+    sf::Vector2i MousePositionWindow;
+    sf::Vector2f MousePositionView;
 public:
-    void checkForQuit();
-    virtual void endState() = 0;
     const bool& getQuit() const;
-    State(sf::RenderWindow* window);
+    State(sf::RenderWindow* window , std::map<std::string, int>* SupportedKeys, std::stack<State*>* states);
     virtual ~State();
-    virtual void updateKeybindes(const float& dt) = 0;
+    void endState();
+    virtual void updateMousePosition();
+    virtual void updateInput(const float& dt) = 0;
     virtual void update(const float& dt) = 0;
     virtual void render(sf::RenderTarget* target = NULL) = 0;
 };

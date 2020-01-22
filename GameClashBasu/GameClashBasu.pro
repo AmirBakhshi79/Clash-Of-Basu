@@ -7,7 +7,11 @@ SOURCES += \
         main.cpp \
     game.cpp \
     state.cpp \
-    gamestate.cpp
+    gamestate.cpp \
+    entity.cpp \
+    mainmenu.cpp \
+    button.cpp \
+    giant.cpp
 
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../../../home/bakhshi/Downloads/SFML-2.5.1-Compiled/lib/release/ -lsfml-graphics
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../../../home/bakhshi/Downloads/SFML-2.5.1-Compiled/lib/debug/ -lsfml-graphics
@@ -34,4 +38,8 @@ HEADERS += \
     game.h \
     state.h \
     state.h \
-    gamestate.h
+    gamestate.h \
+    entity.h \
+    mainmenu.h \
+    button.h \
+    giant.h
