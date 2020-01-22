@@ -7,11 +7,15 @@ class GameState : public State
 private:
     //Entity player;
     std::vector<Entity*> Entities;
+
 public:
     void updateInput(const float& dt);
     void initEntities();
     GameState(sf::RenderWindow* window ,std::map<std::string, int>* SupportedKeys, std::stack<State*>* states);
     ~GameState();
+    void updateIcons();
+    void initTiles();
+
     virtual void update(const float& dt);
     virtual void render(sf::RenderTarget* target = NULL);
 };

@@ -4,6 +4,7 @@ GameState::GameState(sf::RenderWindow* window , std::map<std::string, int>* Supp
     : State(window , SupportedKeys , states)
 {
     initEntities();
+    initTiles();
 }
 void GameState::render(sf::RenderTarget* target)
 {
@@ -12,11 +13,13 @@ void GameState::render(sf::RenderTarget* target)
     {
         item->render(target);
     }
+
 }
 void GameState::update(const float& dt)
 {
     this->updateInput(dt);
     this->updateMousePosition();
+    this->updateIcons();
     //this->player.update(dt);
 }
 
@@ -30,6 +33,19 @@ GameState::~GameState()
     //std::cout << this->Entities.size() << std::endl;
 
     //std::cout << this->Entities.at(0)<< std::endl;
+}
+
+void GameState::updateIcons()
+{
+    for (auto &item : this->Entities)
+    {
+        item->updateIcons(this->MousePositionView);
+    }
+}
+
+void GameState::initTiles()
+{
+
 }
 void GameState::updateInput(const float &dt)
 {

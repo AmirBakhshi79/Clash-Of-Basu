@@ -8,6 +8,7 @@
 #include <iostream>
 #include <map>
 #include <stack>
+#include "tile.h"
 /*
 class Entity
 {
@@ -29,6 +30,7 @@ class Entity
 {
 private:
 protected:
+    unsigned short IconColor;
     sf::Texture texture;
     sf::Sprite sprite;
     sf::Color Colori;
@@ -37,8 +39,10 @@ protected:
 public:
     Entity(std::string FileName, float x, float y);
     ~Entity();
+    const bool iconIsPressed() const;
     void setPositionSprite(float x, float y);
     void setTexture(std::string FileName);
+    void updateIcons(sf::Vector2f& MousePosition);
     void update(const float& dt);
     void render(sf::RenderTarget* target);
 };
