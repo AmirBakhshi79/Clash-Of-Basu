@@ -13,7 +13,16 @@ SOURCES += \
     button.cpp \
     giant.cpp \
     tile.cpp \
-    heroabstractclass.cpp
+    heroabstractclass.cpp \
+    snipper.cpp \
+    drmarry.cpp \
+    commander.cpp \
+    mrsghost.cpp \
+    alphaman.cpp \
+    kratos.cpp \
+    leon.cpp \
+    robi.cpp \
+    professor.cpp
 
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../../../home/bakhshi/Downloads/SFML-2.5.1-Compiled/lib/release/ -lsfml-graphics
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../../../home/bakhshi/Downloads/SFML-2.5.1-Compiled/lib/debug/ -lsfml-graphics
@@ -46,4 +55,13 @@ HEADERS += \
     button.h \
     giant.h \
     tile.h \
-    heroabstractclass.h
+    heroabstractclass.h \
+    snipper.h \
+    drmarry.h \
+    commander.h \
+    mrsghost.h \
+    alphaman.h \
+    kratos.h \
+    leon.h \
+    robi.h \
+    professor.h

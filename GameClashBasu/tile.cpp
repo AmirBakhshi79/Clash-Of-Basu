@@ -55,6 +55,11 @@ void Tile::setPosition(float x, float y)
     this->sprite.setPosition(x , y);
 }
 
+void Tile::setTexture(sf::Texture &Temp)
+{
+    this->sprite.setTexture(Temp);
+}
+
 void Tile::render(sf::RenderTarget *target)
 {
     target->draw(this->sprite);

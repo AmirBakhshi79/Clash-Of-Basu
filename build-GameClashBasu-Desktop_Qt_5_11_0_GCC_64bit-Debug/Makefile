@@ -59,7 +59,16 @@ SOURCES       = ../GameClashBasu/main.cpp \
 		../GameClashBasu/button.cpp \
 		../GameClashBasu/giant.cpp \
 		../GameClashBasu/tile.cpp \
-		../GameClashBasu/heroabstractclass.cpp 
+		../GameClashBasu/heroabstractclass.cpp \
+		../GameClashBasu/snipper.cpp \
+		../GameClashBasu/drmarry.cpp \
+		../GameClashBasu/commander.cpp \
+		../GameClashBasu/mrsghost.cpp \
+		../GameClashBasu/alphaman.cpp \
+		../GameClashBasu/kratos.cpp \
+		../GameClashBasu/leon.cpp \
+		../GameClashBasu/robi.cpp \
+		../GameClashBasu/professor.cpp 
 OBJECTS       = main.o \
 		game.o \
 		state.o \
@@ -69,7 +78,16 @@ OBJECTS       = main.o \
 		button.o \
 		giant.o \
 		tile.o \
-		heroabstractclass.o
+		heroabstractclass.o \
+		snipper.o \
+		drmarry.o \
+		commander.o \
+		mrsghost.o \
+		alphaman.o \
+		kratos.o \
+		leon.o \
+		robi.o \
+		professor.o
 DIST          = /home/bakhshi/Qt5.11.0/5.11.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/bakhshi/Qt5.11.0/5.11.0/gcc_64/mkspecs/common/unix.conf \
 		/home/bakhshi/Qt5.11.0/5.11.0/gcc_64/mkspecs/common/linux.conf \
@@ -262,7 +280,16 @@ DIST          = /home/bakhshi/Qt5.11.0/5.11.0/gcc_64/mkspecs/features/spec_pre.p
 		button.h \
 		giant.h \
 		tile.h \
-		heroabstractclass.h ../GameClashBasu/main.cpp \
+		heroabstractclass.h \
+		snipper.h \
+		drmarry.h \
+		commander.h \
+		mrsghost.h \
+		alphaman.h \
+		kratos.h \
+		leon.h \
+		robi.h \
+		professor.h ../GameClashBasu/main.cpp \
 		../GameClashBasu/game.cpp \
 		../GameClashBasu/state.cpp \
 		../GameClashBasu/gamestate.cpp \
@@ -271,7 +298,16 @@ DIST          = /home/bakhshi/Qt5.11.0/5.11.0/gcc_64/mkspecs/features/spec_pre.p
 		../GameClashBasu/button.cpp \
 		../GameClashBasu/giant.cpp \
 		../GameClashBasu/tile.cpp \
-		../GameClashBasu/heroabstractclass.cpp
+		../GameClashBasu/heroabstractclass.cpp \
+		../GameClashBasu/snipper.cpp \
+		../GameClashBasu/drmarry.cpp \
+		../GameClashBasu/commander.cpp \
+		../GameClashBasu/mrsghost.cpp \
+		../GameClashBasu/alphaman.cpp \
+		../GameClashBasu/kratos.cpp \
+		../GameClashBasu/leon.cpp \
+		../GameClashBasu/robi.cpp \
+		../GameClashBasu/professor.cpp
 QMAKE_TARGET  = GameClashBasu
 DESTDIR       = 
 TARGET        = GameClashBasu
@@ -775,6 +811,15 @@ main.o: ../GameClashBasu/main.cpp ../GameClashBasu/game.h \
 		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
 		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp \
 		../GameClashBasu/tile.h \
+		../GameClashBasu/snipper.h \
+		../GameClashBasu/drmarry.h \
+		../GameClashBasu/commander.h \
+		../GameClashBasu/mrsghost.h \
+		../GameClashBasu/professor.h \
+		../GameClashBasu/kratos.h \
+		../GameClashBasu/leon.h \
+		../GameClashBasu/robi.h \
+		../GameClashBasu/alphaman.h \
 		../GameClashBasu/button.h \
 		../GameClashBasu/gamestate.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../GameClashBasu/main.cpp
@@ -859,6 +904,15 @@ game.o: ../GameClashBasu/game.cpp ../GameClashBasu/game.h \
 		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
 		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp \
 		../GameClashBasu/tile.h \
+		../GameClashBasu/snipper.h \
+		../GameClashBasu/drmarry.h \
+		../GameClashBasu/commander.h \
+		../GameClashBasu/mrsghost.h \
+		../GameClashBasu/professor.h \
+		../GameClashBasu/kratos.h \
+		../GameClashBasu/leon.h \
+		../GameClashBasu/robi.h \
+		../GameClashBasu/alphaman.h \
 		../GameClashBasu/button.h \
 		../GameClashBasu/gamestate.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o game.o ../GameClashBasu/game.cpp
@@ -940,7 +994,16 @@ state.o: ../GameClashBasu/state.cpp ../GameClashBasu/state.h \
 		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Sprite.hpp \
 		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
 		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp \
-		../GameClashBasu/tile.h
+		../GameClashBasu/tile.h \
+		../GameClashBasu/snipper.h \
+		../GameClashBasu/drmarry.h \
+		../GameClashBasu/commander.h \
+		../GameClashBasu/mrsghost.h \
+		../GameClashBasu/professor.h \
+		../GameClashBasu/kratos.h \
+		../GameClashBasu/leon.h \
+		../GameClashBasu/robi.h \
+		../GameClashBasu/alphaman.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o state.o ../GameClashBasu/state.cpp
 
 gamestate.o: ../GameClashBasu/gamestate.cpp ../GameClashBasu/gamestate.h \
@@ -1021,7 +1084,16 @@ gamestate.o: ../GameClashBasu/gamestate.cpp ../GameClashBasu/gamestate.h \
 		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Sprite.hpp \
 		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
 		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp \
-		../GameClashBasu/tile.h
+		../GameClashBasu/tile.h \
+		../GameClashBasu/snipper.h \
+		../GameClashBasu/drmarry.h \
+		../GameClashBasu/commander.h \
+		../GameClashBasu/mrsghost.h \
+		../GameClashBasu/professor.h \
+		../GameClashBasu/kratos.h \
+		../GameClashBasu/leon.h \
+		../GameClashBasu/robi.h \
+		../GameClashBasu/alphaman.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gamestate.o ../GameClashBasu/gamestate.cpp
 
 entity.o: ../GameClashBasu/entity.cpp ../GameClashBasu/entity.h \
@@ -1181,6 +1253,15 @@ mainmenu.o: ../GameClashBasu/mainmenu.cpp ../GameClashBasu/mainmenu.h \
 		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
 		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp \
 		../GameClashBasu/tile.h \
+		../GameClashBasu/snipper.h \
+		../GameClashBasu/drmarry.h \
+		../GameClashBasu/commander.h \
+		../GameClashBasu/mrsghost.h \
+		../GameClashBasu/professor.h \
+		../GameClashBasu/kratos.h \
+		../GameClashBasu/leon.h \
+		../GameClashBasu/robi.h \
+		../GameClashBasu/alphaman.h \
 		../GameClashBasu/button.h \
 		../GameClashBasu/gamestate.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainmenu.o ../GameClashBasu/mainmenu.cpp
@@ -1494,6 +1575,717 @@ heroabstractclass.o: ../GameClashBasu/heroabstractclass.cpp ../GameClashBasu/her
 		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
 		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o heroabstractclass.o ../GameClashBasu/heroabstractclass.cpp
+
+snipper.o: ../GameClashBasu/snipper.cpp ../GameClashBasu/snipper.h \
+		../GameClashBasu/entity.h \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Config.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Clock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Time.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Err.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/FileInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/InputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/NonCopyable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Lock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/MemoryInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Mutex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Sleep.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocal.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Clipboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Context.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/GlResource.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/ContextSettings.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Cursor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Event.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Joystick.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Keyboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Mouse.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Sensor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Touch.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/VideoMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowHandle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowStyle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/BlendMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/CircleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Drawable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderStates.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transform.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transformable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexArray.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Vertex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Color.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/PrimitiveType.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/ConvexShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Font.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glyph.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Texture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Image.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RectangleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTarget.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/View.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTexture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderWindow.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shader.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Sprite.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp \
+		../GameClashBasu/tile.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o snipper.o ../GameClashBasu/snipper.cpp
+
+drmarry.o: ../GameClashBasu/drmarry.cpp ../GameClashBasu/drmarry.h \
+		../GameClashBasu/entity.h \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Config.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Clock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Time.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Err.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/FileInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/InputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/NonCopyable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Lock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/MemoryInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Mutex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Sleep.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocal.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Clipboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Context.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/GlResource.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/ContextSettings.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Cursor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Event.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Joystick.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Keyboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Mouse.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Sensor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Touch.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/VideoMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowHandle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowStyle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/BlendMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/CircleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Drawable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderStates.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transform.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transformable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexArray.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Vertex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Color.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/PrimitiveType.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/ConvexShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Font.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glyph.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Texture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Image.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RectangleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTarget.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/View.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTexture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderWindow.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shader.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Sprite.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp \
+		../GameClashBasu/tile.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o drmarry.o ../GameClashBasu/drmarry.cpp
+
+commander.o: ../GameClashBasu/commander.cpp ../GameClashBasu/commander.h \
+		../GameClashBasu/entity.h \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Config.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Clock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Time.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Err.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/FileInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/InputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/NonCopyable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Lock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/MemoryInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Mutex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Sleep.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocal.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Clipboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Context.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/GlResource.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/ContextSettings.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Cursor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Event.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Joystick.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Keyboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Mouse.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Sensor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Touch.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/VideoMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowHandle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowStyle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/BlendMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/CircleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Drawable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderStates.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transform.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transformable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexArray.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Vertex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Color.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/PrimitiveType.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/ConvexShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Font.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glyph.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Texture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Image.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RectangleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTarget.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/View.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTexture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderWindow.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shader.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Sprite.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp \
+		../GameClashBasu/tile.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o commander.o ../GameClashBasu/commander.cpp
+
+mrsghost.o: ../GameClashBasu/mrsghost.cpp ../GameClashBasu/mrsghost.h \
+		../GameClashBasu/entity.h \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Config.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Clock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Time.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Err.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/FileInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/InputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/NonCopyable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Lock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/MemoryInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Mutex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Sleep.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocal.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Clipboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Context.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/GlResource.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/ContextSettings.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Cursor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Event.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Joystick.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Keyboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Mouse.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Sensor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Touch.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/VideoMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowHandle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowStyle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/BlendMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/CircleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Drawable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderStates.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transform.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transformable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexArray.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Vertex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Color.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/PrimitiveType.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/ConvexShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Font.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glyph.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Texture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Image.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RectangleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTarget.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/View.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTexture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderWindow.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shader.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Sprite.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp \
+		../GameClashBasu/tile.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mrsghost.o ../GameClashBasu/mrsghost.cpp
+
+alphaman.o: ../GameClashBasu/alphaman.cpp ../GameClashBasu/alphaman.h \
+		../GameClashBasu/entity.h \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Config.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Clock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Time.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Err.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/FileInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/InputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/NonCopyable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Lock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/MemoryInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Mutex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Sleep.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocal.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Clipboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Context.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/GlResource.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/ContextSettings.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Cursor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Event.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Joystick.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Keyboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Mouse.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Sensor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Touch.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/VideoMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowHandle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowStyle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/BlendMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/CircleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Drawable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderStates.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transform.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transformable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexArray.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Vertex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Color.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/PrimitiveType.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/ConvexShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Font.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glyph.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Texture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Image.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RectangleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTarget.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/View.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTexture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderWindow.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shader.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Sprite.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp \
+		../GameClashBasu/tile.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o alphaman.o ../GameClashBasu/alphaman.cpp
+
+kratos.o: ../GameClashBasu/kratos.cpp ../GameClashBasu/kratos.h \
+		../GameClashBasu/entity.h \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Config.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Clock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Time.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Err.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/FileInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/InputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/NonCopyable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Lock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/MemoryInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Mutex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Sleep.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocal.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Clipboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Context.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/GlResource.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/ContextSettings.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Cursor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Event.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Joystick.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Keyboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Mouse.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Sensor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Touch.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/VideoMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowHandle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowStyle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/BlendMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/CircleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Drawable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderStates.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transform.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transformable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexArray.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Vertex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Color.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/PrimitiveType.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/ConvexShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Font.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glyph.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Texture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Image.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RectangleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTarget.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/View.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTexture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderWindow.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shader.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Sprite.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp \
+		../GameClashBasu/tile.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o kratos.o ../GameClashBasu/kratos.cpp
+
+leon.o: ../GameClashBasu/leon.cpp ../GameClashBasu/leon.h \
+		../GameClashBasu/entity.h \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Config.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Clock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Time.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Err.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/FileInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/InputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/NonCopyable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Lock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/MemoryInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Mutex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Sleep.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocal.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Clipboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Context.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/GlResource.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/ContextSettings.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Cursor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Event.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Joystick.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Keyboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Mouse.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Sensor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Touch.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/VideoMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowHandle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowStyle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/BlendMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/CircleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Drawable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderStates.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transform.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transformable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexArray.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Vertex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Color.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/PrimitiveType.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/ConvexShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Font.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glyph.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Texture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Image.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RectangleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTarget.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/View.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTexture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderWindow.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shader.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Sprite.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp \
+		../GameClashBasu/tile.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o leon.o ../GameClashBasu/leon.cpp
+
+robi.o: ../GameClashBasu/robi.cpp ../GameClashBasu/robi.h \
+		../GameClashBasu/entity.h \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Config.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Clock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Time.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Err.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/FileInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/InputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/NonCopyable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Lock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/MemoryInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Mutex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Sleep.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocal.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Clipboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Context.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/GlResource.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/ContextSettings.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Cursor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Event.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Joystick.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Keyboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Mouse.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Sensor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Touch.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/VideoMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowHandle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowStyle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/BlendMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/CircleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Drawable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderStates.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transform.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transformable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexArray.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Vertex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Color.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/PrimitiveType.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/ConvexShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Font.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glyph.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Texture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Image.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RectangleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTarget.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/View.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTexture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderWindow.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shader.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Sprite.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp \
+		../GameClashBasu/tile.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o robi.o ../GameClashBasu/robi.cpp
+
+professor.o: ../GameClashBasu/professor.cpp ../GameClashBasu/professor.h \
+		../GameClashBasu/entity.h \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Config.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Clock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Time.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Err.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/FileInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/InputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/NonCopyable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Lock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/MemoryInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Mutex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Sleep.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocal.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Clipboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Context.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/GlResource.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/ContextSettings.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Cursor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Event.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Joystick.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Keyboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Mouse.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Sensor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Touch.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/VideoMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowHandle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowStyle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/BlendMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/CircleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Drawable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderStates.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transform.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transformable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexArray.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Vertex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Color.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/PrimitiveType.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/ConvexShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Font.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glyph.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Texture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Image.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RectangleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTarget.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/View.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTexture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderWindow.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shader.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Sprite.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp \
+		../GameClashBasu/tile.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o professor.o ../GameClashBasu/professor.cpp
 
 ####### Install
 

@@ -3,7 +3,8 @@
 GameState::GameState(sf::RenderWindow* window , std::map<std::string, int>* SupportedKeys, std::stack<State*>* states)
     : State(window , SupportedKeys , states)
 {
-    ::x = 1400;
+    ::x = 1460;
+    ::m = 0;
     initEntities();
     initTiles();
 }
@@ -21,15 +22,13 @@ void GameState::render(sf::RenderTarget* target)
             item2.render(target);
         }
     }
-    /*
-    for (int i = 0; i < 9; i++)
+    for (auto &item1 : this->Tiles2)
     {
-        for(int j = 0, y = 20; j < 9, y <= 180; j++, y = y + 20)
+        for (auto &item2 : item1)
         {
-            this->Tiles1[i][j].render(target);
+            item2.render(target);
         }
     }
-    */
 
 }
 void GameState::update(const float& dt)
@@ -38,6 +37,12 @@ void GameState::update(const float& dt)
     this->updateMousePosition();
     this->updateIcons();
     this->updateTileIcons();
+    sf::Event event;
+
+
+
+
+
     //this->selectWitchIcon();
     //this->player.update(dt);
 }
@@ -57,10 +62,34 @@ GameState::~GameState()
 
 void GameState::updateIcons()
 {
-    for (auto &item : this->Entities)
+    for (short int i = 0; i < this->Entities.size(); i++)
     {
-        item->updateIcons(this->MousePositionView);
+        if (this->Entities.at(i)->sprite.getGlobalBounds().contains(this->MousePositionView))
+        {
+            this->Entities.at(i)->setColor(sf::Color::Red);
+            //std::cout << this->Entities.at(0)->W << " " << this->Entities.at(1)->W << std::endl;
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                this->Entities.at(i)->setColor(sf::Color::Blue);
+                for (short int j = 0;j < this->Entities.size(); j++)
+                {
+                    if (this->Entities.at(j)->W != this->Entities.at(i)->W)
+                    {
+                        this->Entities.at(j)->setColor(sf::Color::White);
+                    }
+                }
+            }
+            for (short int j = 0;j < this->Entities.size(); j++)
+            {
 
+                if (this->Entities.at(j)->W != this->Entities.at(i)->W)
+                {
+
+                    this->Entities.at(j)->setColor(sf::Color::White);
+                }
+            }
+
+        }
     }
 }
 
@@ -77,17 +106,18 @@ void GameState::initTiles()
         ::x = ::x + 51;
         y = 550;
     }
-    /*
-    for (unsigned short int i = 0; i < 9; i++)
+    y = 550;
+    for (auto &item1 : this->Tiles2)
     {
-        for(unsigned short int j = 0, y = 550; j < 9, y <= 1009; j++, y = y + 51)
+        for (auto &item2 : item1)
         {
-            this->Tiles1.at()
-            //this->Tiles1[i][j].setPosition(::x , y);
-            ::x = ::x + 5.2;
+            item2.setPosition(::m,y);
+            y = y + 51;
         }
+        ::m = ::m + 51;
+        y = 550;
     }
-    */
+
 }
 
 void GameState::updateTileIcons()
@@ -99,69 +129,46 @@ void GameState::updateTileIcons()
             item2.updateTilesIcons(this->MousePositionView);
         }
     }
-}
-/*
-void GameState::selectWitchIcon()
-{
-    for (auto &item1 : this->Entities)
-    {
-        if (item1->IconColor == ICN_COLORIII)
-        {
-            std::cout << "Clicked" << std::endl;
-            sf::Texture temp;
-            switch(item1->WitchTexture )
-            {
-            case GIANT:
-                temp.loadFromFile("../Images/giant.png");
-                std::cout << "Giant is loaded" << std::endl;
-                break;
-
-            }
-            this->setIconOnGird(temp);
-            /*
-            for (auto &item2 : this->Tiles1)
-            {
-                for (auto &item3 : item2)
-                {
-                    item3.updateTilesIcons(this->MousePositionView);
-                    std::cout << "Im Here" << std::endl;
-                    if (item3.isColoriii())
-                    {
-                        std::cout << "Im Here" << std::endl;
-                        item3.updateTexture(temp);
-                    }
-                }
-            }
-
-        }
-    }
-}
-
-void GameState::setIconOnGird(sf::Texture &t)
-{
-    for (auto &item1 : this->Tiles1)
+    for (auto &item1 : this->Tiles2)
     {
         for (auto &item2 : item1)
         {
-
-            this->updateIcons();
-            /*
-            std::cout << "A" << std::endl;
-            std::cout << item2.TileColor;
-
-            if (item2.gridColor == TL_COLORIII)
-            {
-                std::cout << "A" << std::endl;
-                item2.updateTexture(t);
-                this->updateIcons();
-            }
-            //this->updateIcons();
+            item2.updateTilesIcons(this->MousePositionView);
         }
-        this->updateIcons();
     }
-    this->updateIcons();
 }
-*/
+
+void GameState::selectHero(sf::Event event)
+{
+
+}
+
+void GameState::selectGrid(sf::Texture temp)
+{
+    bool status = true;
+    while(status)
+    {
+        for (auto &item : this->Tiles1)
+        {
+            for (auto &item2 : item)
+            {
+                std::cout << "Im\n";
+                if(item2.sprite.getGlobalBounds().contains(this->MousePositionView))
+                {
+
+                    if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                    {
+
+                        item2.setTexture(temp);
+                        status = false;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 void GameState::updateInput(const float &dt)
 {
 
@@ -181,5 +188,14 @@ void GameState::updateInput(const float &dt)
 
 void GameState::initEntities()
 {
-    this->Entities.push_back(new Giant("../Images/giant.png", 10, 10));
+    this->Entities.push_back(new Giant("../Images/giant.png",0,0));
+    this->Entities.push_back(new Snipper("../Images/snipper.png",100,0));
+    this->Entities.push_back(new DrMarry("../Images/drmarry.png",200,0));
+    this->Entities.push_back(new Commander("../Images/commander.png",300,0));
+    this->Entities.push_back(new Professor("../Images/professor.png",400,0));
+    this->Entities.push_back(new Robi("../Images/robi.png",500,0));
+    this->Entities.push_back(new Leon("../Images/leon.png",600,0));
+    this->Entities.push_back(new AlphaMan("../Images/alphaman.png",700,0));
+    this->Entities.push_back(new Kratos("../Images/kratos.png",800,0));
+    this->Entities.push_back(new MrsGhost("../Images/mrsghost.png",900,0));
 }

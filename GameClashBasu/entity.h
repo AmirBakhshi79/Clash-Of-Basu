@@ -26,26 +26,29 @@ public:
 };
 */
 enum IconColor{ICN_COLORI = 0, ICN_COLORII, ICN_COLORIII};
-enum WitchTexture{GIANT = 0, PROFESSOR, DRMARRY, SNIPPER, COMMANDER, MRSGHOST, KRATOS, ROBI, LEON, ALPHAMAN};
+enum WitchTexture{GIANT = 0, SNIPPER, DRMARRY, COMMANDER, MRSGHOST, KRATOS, ROBI, LEON, ALPHAMAN, PROFESSOR};
 class Entity
 {
 private:
 protected:
     sf::Texture texture;
-    sf::Sprite sprite;
     sf::Color Colori;
     sf::Color Colorii;
     sf::Color Coloriii;
 public:
     Entity(std::string FileName, float x, float y);
     ~Entity();
+    sf::Sprite sprite;
     const bool iconIsPressed() const;
     unsigned short IconColor;
-    unsigned short WitchTexture;
+    WitchTexture W;
     void setPositionSprite(float x, float y);
     void setTexture(std::string FileName);
     void updateIcons(sf::Vector2f& MousePosition);
     void update(const float& dt);
     void render(sf::RenderTarget* target);
+    void setColor(sf::Color Color);
+
+
 };
 #endif // ENTITY_H

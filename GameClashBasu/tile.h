@@ -13,18 +13,19 @@ class Tile
 {
 private:
     sf::Texture texture;
-    sf::Sprite sprite;
     sf::Color Colori = sf::Color::White;
     sf::Color Colorii = sf::Color::Red;
     sf::Color Coloriii = sf::Color::Blue;
 public:
    // sf::Sprite sprite;
     Tile();
+    sf::Sprite sprite;
     TileColor gridColor;
     const bool isColoriii();
     void updateTexture(sf::Texture& t);
     void updateTilesIcons(sf::Vector2f& MousePosition);
     void setPosition(float x, float y);
+    void setTexture(sf::Texture& Temp);
     void render(sf::RenderTarget* target);
 };
 

@@ -31,7 +31,7 @@ Entity::Entity(std::string FileName, float x, float y)
     this->Colori = sf::Color::White;
     this->Colorii = sf::Color::Red;
     this->Coloriii = sf::Color::Black;
-    this->IconColor = ICN_COLORI;
+    //this->IconColor = ICN_COLORI;
 
 
 }
@@ -40,10 +40,10 @@ void Entity::setTexture(std::string FileName)
     const char* FN = FileName.c_str();
     this->texture.loadFromFile(FN);
     this->sprite.setTexture(this->texture);
-    this->sprite.setColor(sf::Color::Blue);
-    this->sprite.setScale(1.3f,1.3f);
+    this->sprite.setColor(sf::Color::White);
+    this->sprite.setScale(1.2f,1.2f);
 }
-
+/*
 void Entity::updateIcons(sf::Vector2f &MousePosition)
 {
     this->IconColor = ICN_COLORI;
@@ -71,10 +71,18 @@ void Entity::updateIcons(sf::Vector2f &MousePosition)
     }
 
 }
+*/
 void Entity::render(sf::RenderTarget *target)
 {
     target->draw(this->sprite);
 }
+
+void Entity::setColor(sf::Color Color)
+{
+    this->sprite.setColor(Color);
+}
+
+
 void Entity::update(const float &dt)
 {
 

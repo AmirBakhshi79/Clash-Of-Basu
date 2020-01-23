@@ -3,13 +3,14 @@
 
 #include "state.h"
 static float x;
+static float m;
 class GameState : public State
 {
 private:
     //Entity player;
     std::vector<Entity*> Entities;
     std::array<std::array<Tile, 9>, 9> Tiles1;
-    //Tile Tiles2[9][9];
+    std::array<std::array<Tile, 9>, 9> Tiles2;
 
 
 public:
@@ -20,9 +21,9 @@ public:
     void updateIcons();
     void initTiles();
     void updateTileIcons();
-    //void selectWitchIcon();
-    //void setIconOnGird(sf::Texture& t);
-    void WitchTexture();
+
+    void selectHero(sf::Event event);
+    void selectGrid(sf::Texture temp);
     virtual void update(const float& dt);
     virtual void render(sf::RenderTarget* target = NULL);
 };

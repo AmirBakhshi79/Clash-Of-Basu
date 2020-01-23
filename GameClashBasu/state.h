@@ -1,6 +1,15 @@
 #ifndef STATE_H
 #define STATE_H
 #include "giant.h"
+#include "snipper.h"
+#include "drmarry.h"
+#include "commander.h"
+#include "mrsghost.h"
+#include "professor.h"
+#include "kratos.h"
+#include "leon.h"
+#include "robi.h"
+#include "alphaman.h"
 class State
 {
 private:
