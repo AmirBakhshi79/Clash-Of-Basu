@@ -12,7 +12,8 @@ SOURCES += \
     mainmenu.cpp \
     button.cpp \
     giant.cpp \
-    tile.cpp
+    tile.cpp \
+    heroabstractclass.cpp
 
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../../../home/bakhshi/Downloads/SFML-2.5.1-Compiled/lib/release/ -lsfml-graphics
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../../../home/bakhshi/Downloads/SFML-2.5.1-Compiled/lib/debug/ -lsfml-graphics
@@ -44,4 +45,5 @@ HEADERS += \
     mainmenu.h \
     button.h \
     giant.h \
-    tile.h
+    tile.h \
+    heroabstractclass.h

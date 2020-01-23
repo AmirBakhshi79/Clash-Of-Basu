@@ -94,3 +94,4 @@ const bool Entity::iconIsPressed() const
         return true;
     return false;
 }
+

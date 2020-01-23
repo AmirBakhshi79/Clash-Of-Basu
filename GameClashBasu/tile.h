@@ -8,20 +8,24 @@
 #include <map>
 #include <stack>
 
+enum TileColor {TL_COLORI = 0, TL_COLORII, TL_COLORIII};
 class Tile
 {
 private:
     sf::Texture texture;
     sf::Sprite sprite;
-    bool FillOrEmpty;
-
-
+    sf::Color Colori = sf::Color::White;
+    sf::Color Colorii = sf::Color::Red;
+    sf::Color Coloriii = sf::Color::Blue;
 public:
-    Tile(sf::Texture texture, float x, float y);
+   // sf::Sprite sprite;
+    Tile();
+    TileColor gridColor;
+    const bool isColoriii();
+    void updateTexture(sf::Texture& t);
+    void updateTilesIcons(sf::Vector2f& MousePosition);
     void setPosition(float x, float y);
-    void update();
     void render(sf::RenderTarget* target);
-    void setTexture(sf::Texture texture);
 };
 
 #endif // TILE_H

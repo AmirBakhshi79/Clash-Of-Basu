@@ -2,11 +2,15 @@
 #define GAMESTATE_H
 
 #include "state.h"
+static float x;
 class GameState : public State
 {
 private:
     //Entity player;
     std::vector<Entity*> Entities;
+    std::array<std::array<Tile, 9>, 9> Tiles1;
+    //Tile Tiles2[9][9];
+
 
 public:
     void updateInput(const float& dt);
@@ -15,7 +19,10 @@ public:
     ~GameState();
     void updateIcons();
     void initTiles();
-
+    void updateTileIcons();
+    //void selectWitchIcon();
+    //void setIconOnGird(sf::Texture& t);
+    void WitchTexture();
     virtual void update(const float& dt);
     virtual void render(sf::RenderTarget* target = NULL);
 };
