@@ -37,7 +37,10 @@ void GameState::update(const float& dt)
     this->updateMousePosition();
     this->updateIcons();
     this->updateTileIcons();
-    sf::Event event;
+    if (this->Statu1)
+    {
+        this->selectHero();
+    }
 
 
 
@@ -49,7 +52,7 @@ void GameState::update(const float& dt)
 
 GameState::~GameState()
 {
-    for (size_t i = 0; i < Entities.size(); i++)
+    for (unsigned short int i = 0; i < Entities.size(); i++)
     {
         delete Entities.at(i);
         Entities.erase(Entities.begin() + i);
@@ -62,7 +65,7 @@ GameState::~GameState()
 
 void GameState::updateIcons()
 {
-    for (short int i = 0; i < this->Entities.size(); i++)
+    for (unsigned short int i = 0; i < this->Entities.size(); i++)
     {
         if (this->Entities.at(i)->sprite.getGlobalBounds().contains(this->MousePositionView))
         {
@@ -71,7 +74,7 @@ void GameState::updateIcons()
             if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
             {
                 this->Entities.at(i)->setColor(sf::Color::Blue);
-                for (short int j = 0;j < this->Entities.size(); j++)
+                for (unsigned short int j = 0;j < this->Entities.size(); j++)
                 {
                     if (this->Entities.at(j)->W != this->Entities.at(i)->W)
                     {
@@ -79,7 +82,7 @@ void GameState::updateIcons()
                     }
                 }
             }
-            for (short int j = 0;j < this->Entities.size(); j++)
+            for (unsigned short int j = 0;j < this->Entities.size(); j++)
             {
 
                 if (this->Entities.at(j)->W != this->Entities.at(i)->W)
@@ -138,8 +141,63 @@ void GameState::updateTileIcons()
     }
 }
 
-void GameState::selectHero(sf::Event event)
+void GameState::selectHero()
 {
+
+    sf::Event event;
+    while (this->window->pollEvent(event) && x != 5)
+    {
+        if (event.type == sf::Event::MouseButtonPressed)
+        {
+            for (auto &item1 : this->Entities)
+            {
+                if (item1->sprite.getGlobalBounds().contains(this->MousePositionView))
+                {
+
+                    if (event.mouseButton.button == sf::Mouse::Left)
+                    {
+                        switch (item1->W) {
+                        case GIANT:
+                            std::cout << "Giant\n";
+                            break;
+                        case SNIPPER:
+                            std::cout << "Snipper\n";
+                            break;
+                        case COMMANDER:
+                            std::cout << "Commander\n";
+                            break;
+                        case PROFESSOR:
+                            std::cout << "Professor\n";
+                            break;
+                        case KRATOS:
+                            std::cout << "Kratos\n";
+                            break;
+                        case LEON:
+                            std::cout << "Leon\n";
+                            break;
+                        case ALPHAMAN:
+                            std::cout << "AphaMan\n";
+                            break;
+                        case ROBI:
+                            std::cout << "Robi\n";
+                            break;
+                        case DRMARRY:
+                            std::cout << "Drmarry\n";
+                            break;
+                        case MRSGHOST:
+                            std::cout << "MrsGhost\n";
+                            break;
+                        default:
+                            break;
+                        }
+                        this->x = this->x + 1;
+                        if (this->x == 5)
+                            this->Statu1 = false;
+                    }
+                }
+            }
+        }
+    }
 
 }
 

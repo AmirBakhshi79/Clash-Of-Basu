@@ -14,6 +14,12 @@ private:
 
 
 public:
+    bool Statu1 = true;
+    unsigned short int x = 0;
+
+
+
+
     void updateInput(const float& dt);
     void initEntities();
     GameState(sf::RenderWindow* window ,std::map<std::string, int>* SupportedKeys, std::stack<State*>* states);
@@ -22,10 +28,12 @@ public:
     void initTiles();
     void updateTileIcons();
 
-    void selectHero(sf::Event event);
+    void selectHero();
     void selectGrid(sf::Texture temp);
     virtual void update(const float& dt);
     virtual void render(sf::RenderTarget* target = NULL);
+
+
 };
 
 #endif // GAMESTATE_H
