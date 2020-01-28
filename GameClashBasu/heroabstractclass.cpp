@@ -5,6 +5,7 @@ HeroAbstractClass::HeroAbstractClass()
 
 }
 
+
 void HeroAbstractClass::update(const float &dt)
 {
 

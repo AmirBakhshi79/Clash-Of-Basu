@@ -16,8 +16,7 @@ protected:
 public:
     virtual ~HeroAbstractClass();
     HeroAbstractClass();
-    virtual void setPower() = 0;
-    virtual void setHealth() = 0;
+    virtual void setAttribute() = 0;
     virtual void update(const float& dt);
     virtual void render(sf::RenderTarget* target);
 };

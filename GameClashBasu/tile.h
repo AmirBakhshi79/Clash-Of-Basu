@@ -8,7 +8,9 @@
 #include <map>
 #include <stack>
 
+
 enum TileColor {TL_COLORI = 0, TL_COLORII, TL_COLORIII};
+
 class Tile
 {
 private:
@@ -17,7 +19,7 @@ private:
     sf::Color Colorii = sf::Color::Red;
     sf::Color Coloriii = sf::Color::Blue;
 public:
-   // sf::Sprite sprite;
+    int y;
     Tile();
     sf::Sprite sprite;
     TileColor gridColor;
@@ -27,6 +29,9 @@ public:
     void setPosition(float x, float y);
     void setTexture(sf::Texture& Temp);
     void render(sf::RenderTarget* target);
+
+
+    void setColor(sf::Color Color);
 };
 
 #endif // TILE_H

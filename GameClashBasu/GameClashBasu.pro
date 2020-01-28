@@ -22,7 +22,17 @@ SOURCES += \
     kratos.cpp \
     leon.cpp \
     robi.cpp \
-    professor.cpp
+    professor.cpp \
+    gianthero.cpp \
+    snipperhero.cpp \
+    robihero.cpp \
+    kratoshero.cpp \
+    commanderhero.cpp \
+    mrsghosthero.cpp \
+    alphamanhero.cpp \
+    professorhero.cpp \
+    leonhero.cpp \
+    drmarryhero.cpp
 
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../../../home/bakhshi/Downloads/SFML-2.5.1-Compiled/lib/release/ -lsfml-graphics
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../../../home/bakhshi/Downloads/SFML-2.5.1-Compiled/lib/debug/ -lsfml-graphics
@@ -64,4 +74,14 @@ HEADERS += \
     kratos.h \
     leon.h \
     robi.h \
-    professor.h
+    professor.h \
+    gianthero.h \
+    snipperhero.h \
+    robihero.h \
+    kratoshero.h \
+    commanderhero.h \
+    mrsghosthero.h \
+    alphamanhero.h \
+    professorhero.h \
+    leonhero.h \
+    drmarryhero.h
