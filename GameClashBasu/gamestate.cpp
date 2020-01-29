@@ -47,6 +47,14 @@ void GameState::update(const float& dt)
     {
         this->selectTileForHero();
     }
+    if (this->Status4)
+    {
+        this->selectHero2();
+    }
+    if (this->Status5)
+    {
+        this->selectTileForHero2();
+    }
 
 
 
@@ -99,6 +107,44 @@ void GameState::updateTileIcons()
                         if (n.y != item2.y)
                         {
                             n.setColor(sf::Color::White);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    for (auto &counter1 : this->Tiles2)
+    {
+        for (auto &counter2 : counter1)
+        {
+            if (counter2.sprite.getGlobalBounds().contains(this->MousePositionView))
+            {
+                std::cout << "Im Here\n";
+                counter2.setColor(sf::Color::Red);
+                if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                {
+                    counter2.setColor(sf::Color::Blue);
+                    for (auto &k : this->Tiles2)
+                    {
+                        for (auto &l : k)
+                        {
+                            if (l.y != counter2.y)
+                            {
+                                l.setColor(sf::Color::White);
+                            }
+                        }
+                    }
+                }
+                for (auto &q : this->Tiles2)
+                {
+                    for (auto &w : q)
+                    {
+                        if (w.y != counter2.y)
+                        {
+                            w.setColor(sf::Color::White);
                         }
                     }
                 }
@@ -197,6 +243,7 @@ void GameState::selectHero()
 {
 
     sf::Event event;
+
     while (this->window->pollEvent(event) && x != 5)
     {
 
@@ -257,12 +304,115 @@ void GameState::selectHero()
                         this->Status1 = false;
                         this->Status2 = true;
                         this->Status3 = false;
+                        this->x = 0;
                         break;
                     }
                 }
             }
         }
     }
+
+}
+
+void GameState::selectTileForHero2()
+{
+    sf::Event event;
+    static unsigned short int j = 0;
+    //std::cout << "Enter\n";
+    while (this->window->pollEvent(event) && this->y != 5)
+    {
+
+        for (auto &item1 : this->Tiles2)
+        {
+            for (auto &item2 : item1)
+            {
+                if (item2.sprite.getGlobalBounds().contains(this->MousePositionView))
+                {
+                    if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                    {
+
+
+                        sf::Texture temp;
+                        switch (this->Heroes2.at(j)) {
+                        case 1:
+                            temp.loadFromFile("../Images/giant.png");
+                            item2.sprite.setTexture(temp);
+                            j++;
+                            std::cout << j << "\n";
+                            break;
+                        case 2:
+                            temp.loadFromFile("../Images/snipper.png");
+                            item2.sprite.setTexture(temp);
+                            j++;
+                            std::cout << j << "\n";
+                            break;
+                        case 3:
+                            temp.loadFromFile("../Images/drmarry.png");
+                            item2.sprite.setTexture(temp);
+                            j++;
+                            std::cout << j << "\n";
+                            break;
+                        case 4:
+                            temp.loadFromFile("../Images/kratos.png");
+                            item2.sprite.setTexture(temp);
+                            j++;
+                            std::cout << j << "\n";
+                            break;
+                        case 5:
+                            temp.loadFromFile("../Images/alphaman.png");
+                            item2.sprite.setTexture(temp);
+                            j++;
+                            std::cout << j << "\n";
+                            break;
+                        case 6:
+                            temp.loadFromFile("../Images/leon.png");
+                            item2.sprite.setTexture(temp);
+                            j++;
+                            std::cout << j << "\n";
+                            break;
+                        case 7:
+                            temp.loadFromFile("../Images/commander.png");
+                            item2.sprite.setTexture(temp);
+                            j++;
+                            std::cout << j << "\n";
+                            break;
+                        case 8:
+                            temp.loadFromFile("../Images/robi.png");
+                            item2.sprite.setTexture(temp);
+                            j++;
+                            std::cout << j << "\n";
+                            break;
+                        case 9:
+                            temp.loadFromFile("../Images/mrsghost.png");
+                            item2.sprite.setTexture(temp);
+                            j++;
+                            std::cout << j << "\n";
+                            break;
+                        case 10:
+                            temp.loadFromFile("../Images/professor.png");
+                            item2.sprite.setTexture(temp);
+                            j++;
+                            std::cout << j << "\n";
+                            break;
+                        default:
+                            break;
+
+                        }
+
+                        if (j == 5)
+                        {
+                            this->Status5 = false;
+                            break;
+                        }
+
+
+                    }
+                }
+            }
+        }
+    }
+
+
 
 }
 
@@ -351,13 +501,87 @@ void GameState::selectTileForHero()
 
                         }
 
-                        if (i == 4)
+                        if (i == 5)
                         {
                             this->Status2 = false;
                             break;
                         }
 
 
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+void GameState::selectHero2()
+{
+
+    sf::Event event;
+    while (this->window->pollEvent(event) && x != 5)
+    {
+
+
+        for (auto &item : this->Entities)
+        {
+            if (item->sprite.getGlobalBounds().contains(this->MousePositionView))
+            {
+                if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                {
+                    switch (item->W) {
+                    case GIANT:
+                        this->Heroes2.push_back(1);
+                        std::cout << "GIANT  "<<this->Heroes2.size()<<"\n";
+                        break;
+                    case SNIPPER:
+                        this->Heroes2.push_back(2);
+                        std::cout << "SNIPPER  "<<this->Heroes2.size()<<"\n";
+                        break;
+                    case DRMARRY:
+                        this->Heroes2.push_back(3);
+                        std::cout << "DRMARRY  "<<this->Heroes2.size()<<"\n";
+                        break;
+                    case KRATOS:
+                        this->Heroes2.push_back(4);
+                        std::cout << "KRATOS  "<<this->Heroes2.size()<<"\n";
+                        break;
+                    case ALPHAMAN:
+                        this->Heroes2.push_back(5);
+                        std::cout << "ALPHAMAN  "<<this->Heroes2.size()<<"\n";
+                        break;
+                    case LEON:
+                        this->Heroes2.push_back(6);
+                        std::cout << "LEON  "<<this->Heroes2.size()<<"\n";
+                        break;
+                    case COMMANDER:
+                        this->Heroes2.push_back(7);
+                        std::cout << "COMMADNER  "<<this->Heroes2.size()<<"\n";
+                        break;
+                    case ROBI:
+                        this->Heroes2.push_back(8);
+                        std::cout << "ROBI  "<<this->Heroes2.size()<<"\n";
+                        break;
+                    case MRSGHOST:
+                        this->Heroes2.push_back(9);
+                        std::cout << "MRSGHOST  "<<this->Heroes2.size()<<"\n";
+                        break;
+                    case PROFESSOR:
+                        this->Heroes2.push_back(10);
+                        std::cout << "PROFESSOR  "<<this->Heroes2.size()<<"\n";
+                        break;
+
+                    default:
+                        break;
+                    }
+                    if (this->Heroes2.size() == 5)
+                    {
+                        this->Status4 = false;
+                        this->Status5 = true;
+                        this->Status3 = false;
+                        break;
                     }
                 }
             }
