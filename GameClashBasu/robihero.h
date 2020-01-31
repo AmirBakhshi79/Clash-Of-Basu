@@ -7,8 +7,9 @@ class ROBIHero : public HeroAbstractClass
 private:
 
 public:
-    ROBIHero();
+    ROBIHero(std::string FileName, float x, float y);
     void setAttribute();
+    void attack();
 };
 
 #endif // ROBIHERO_H

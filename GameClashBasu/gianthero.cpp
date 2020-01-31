@@ -8,7 +8,12 @@ void GiantHero::setAttribute()
 
 }
 
-GiantHero::GiantHero()
+GiantHero::GiantHero(std::string FileName, float x, float y) : HeroAbstractClass(FileName, x, y)
 {
     this->setAttribute();
+}
+
+void GiantHero::attack()
+{
+
 }

@@ -7,8 +7,9 @@ class LeonHero : public HeroAbstractClass
 private:
 
 public:
-    LeonHero();
+    LeonHero(std::string FileName, float x, float y);
     void setAttribute();
+    void attack();
 };
 
 #endif // LEONHERO_H

@@ -8,8 +8,9 @@ private:
 
 
 public:
-    SnipperHero();
+    SnipperHero(std::string FileName, float x, float y);
     void setAttribute();
+    void attack();
 };
 
 #endif // SNIPPERHERO_H

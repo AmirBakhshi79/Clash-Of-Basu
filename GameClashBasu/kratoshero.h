@@ -7,8 +7,9 @@ class KratosHero : public HeroAbstractClass
 private:
 
 public:
-    KratosHero();
+    KratosHero(std::string FileName, float x, float y);
     void setAttribute();
+    void attack();
 };
 
 #endif // KRATOSHERO_H

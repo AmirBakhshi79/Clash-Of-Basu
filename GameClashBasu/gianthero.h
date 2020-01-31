@@ -8,7 +8,8 @@ private:
 
 public:
     void setAttribute();
-    GiantHero();
+    GiantHero(std::string FileName, float x, float y);
+    void attack();
 };
 
 #endif // GIANTHERO_H

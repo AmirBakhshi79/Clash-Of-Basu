@@ -7,8 +7,9 @@ class ProfessorHero : public HeroAbstractClass
 private:
 
 public:
-    ProfessorHero();
+    ProfessorHero(std::string FileName, float x, float y);
     void setAttribute();
+    void attack();
 };
 
 #endif // PROFESSORHERO_H

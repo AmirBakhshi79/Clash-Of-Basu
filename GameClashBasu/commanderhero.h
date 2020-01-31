@@ -7,8 +7,9 @@ class CommanderHero : public HeroAbstractClass
 private:
 
 public:
-    CommanderHero();
+    CommanderHero(std::string FileName, float x, float y);
     void setAttribute();
+    void attack();
 };
 
 #endif // COMMANDERHERO_H

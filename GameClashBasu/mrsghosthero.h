@@ -7,8 +7,9 @@ class MrsGhostHero :public HeroAbstractClass
 private:
 
 public:
-    MrsGhostHero();
+    MrsGhostHero(std::string FileName, float x, float y);
     void setAttribute();
+    void attack();
 };
 
 #endif // MRSGHOSTHERO_H
