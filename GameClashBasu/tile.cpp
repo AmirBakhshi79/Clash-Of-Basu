@@ -8,7 +8,7 @@ Tile::Tile()
     this->texture.loadFromFile("../Images/Green.png");
     this->sprite.setTexture(this->texture);
     this->sprite.setScale(0.1f,0.1f);
-    this->sprite.setColor(sf::Color::White);
+    //this->sprite.setColor(sf::Color::White);
     this->gridColor = TL_COLORI;
 
 }

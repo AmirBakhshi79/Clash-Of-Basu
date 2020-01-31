@@ -78,7 +78,7 @@ void MainMenu::initBackGround()
                                  static_cast<float> (this->window->getSize().y)
                                  )
                              );
-    this->BGtexture.loadFromFile("../Images/BG.jpg");
+    this->BGtexture.loadFromFile("../Images/G.jpg");
     this->BackGround.setTexture(&this->BGtexture);
 }
 void MainMenu::renderButtons(sf::RenderTarget *target)

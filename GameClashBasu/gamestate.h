@@ -43,7 +43,7 @@ public:
     bool Status1 = true;
     bool Status2 = false;
     bool Status3 = true;
-
+    bool startGane = false;
     bool Status4 = true;
     bool Status5 = false;
     unsigned short int x = 0;
@@ -69,7 +69,7 @@ public:
     void selectTileForHero2();
     void selectTileForHero();
 
-
+    void Play();
     void selectHero2();
     void selectGrid(sf::Texture temp);
     virtual void update(const float& dt);
@@ -77,6 +77,19 @@ public:
 
     void updateTiles();
 
+    void selectTile();
+
+
+    sf::Texture t1;
+    sf::Texture t2;
+    sf::Texture t3;
+    sf::Texture t4;
+    sf::Texture t5;
+    sf::Texture t6;
+    sf::Texture t7;
+    sf::Texture t8;
+    sf::Texture t9;
+    sf::Texture t10;
 
 };
 

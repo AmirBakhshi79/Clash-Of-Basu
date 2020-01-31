@@ -14,11 +14,11 @@ protected:
     int Health;
     bool Ability;
     sf::Texture Icon;
-    sf::Sprite Hero;
+
 public:
     virtual ~HeroAbstractClass();
     HeroAbstractClass(std::string FileName, float x, float y);
-
+    sf::Sprite Hero;
     int getHealth();
     int getPower();
     void setTexture(std::string FileName);

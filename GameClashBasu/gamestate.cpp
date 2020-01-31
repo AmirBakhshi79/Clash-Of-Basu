@@ -13,6 +13,20 @@ GameState::GameState(sf::RenderWindow* window , std::map<std::string, int>* Supp
     this->initTiles();
    // this->initBackGround();
 
+
+
+
+    this->t1.loadFromFile("../Images/giant.png");
+    this->t2.loadFromFile("../Images/snipper.png");
+    this->t3.loadFromFile("../Images/drmarry.png");
+    this->t4.loadFromFile("../Images/kratos.png");
+    this->t5.loadFromFile("../Images/alphaman.png");
+    this->t6.loadFromFile("../Images/leon.png");
+    this->t7.loadFromFile("../Images/commander.png");
+    this->t8.loadFromFile("../Images/robi.png");
+    this->t9.loadFromFile("../Images/mrsghost.png");
+    this->t10.loadFromFile("../Images/professor.png");
+
 }
 void GameState::render(sf::RenderTarget* target)
 {
@@ -80,6 +94,30 @@ void GameState::updateTiles()
     }
 
 }
+
+void GameState::selectTile()
+{
+    sf::Event event;
+    while (this->window->pollEvent(event))
+    {
+        for (auto &item1 : this->Tiles1)
+        {
+            for (auto &item2 : item1)
+            {
+                if (item2.sprite.getGlobalBounds().contains(this->MousePositionView))
+                {
+                    if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                    {
+                        item2.setColor(sf::Color::White);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
 void GameState::update(const float& dt)
 {
     this->updateInput(dt);
@@ -87,11 +125,12 @@ void GameState::update(const float& dt)
     this->updateIcons();
 
     //this->updateTileIcons();
-
+/*
     if (this->Status3)
     {
         this->updateTileIcons();
     }
+    */
     if (this->Status1)
     {
         this->selectHero();
@@ -107,6 +146,10 @@ void GameState::update(const float& dt)
     if (this->Status5)
     {
         this->selectTileForHero2();
+    }
+    if (this->startGane)
+    {
+        this->Play();
     }
 
 
@@ -327,6 +370,7 @@ void GameState::selectHero()
                         this->Entity1.push_back(new GiantHero("../Images/giant.png" , this->position11, ::position12));
                         std::cout << this->position11 << std::endl;
                       //  this->Entities.erase(this->Entities.begin() + 0);
+
                         break;
                     case SNIPPER:
                         this->Heroes.push_back(2);
@@ -368,8 +412,9 @@ void GameState::selectHero()
                         this->Heroes.push_back(8);
                         std::cout << "ROBI  "<<this->Heroes.size()<<"\n";
                         this->Entity1.push_back(new SnipperHero("../Images/robi.png" , this->position11, ::position12));
-                        //this->Entities.erase(this->Entities.begin() + 7);
+                        //this->Entities.erase(this->Entities.begin() + 7);                       
                         break;
+
                     case MRSGHOST:
                         this->Heroes.push_back(9);
                         std::cout << "MRSGHOST  "<<this->Heroes.size()<<"\n";
@@ -490,12 +535,14 @@ void GameState::selectTileForHero2()
 
                         }
 
+
                         if (j == 5)
                         {
                             this->Status5 = false;
                             this->Status3 = false;
                             //this->updateTiles();
                             this->updateTiles();
+                            this->selectTile();
 
                             break;
                         }
@@ -527,67 +574,88 @@ void GameState::selectTileForHero()
                 {
                     if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
                     {
-
-
                         sf::Texture temp;
+
                         switch (this->Heroes.at(i)) {
                         case 1:
-                            temp.loadFromFile("../Images/giant.png");
-                            item2.sprite.setTexture(temp);
+                             temp.loadFromFile("../Images/giant.png");
+                             item2.sprite.setTexture(temp);
+                            // item2.sprite.setScale(0.7f,0.7f);
+                           // item2.sprite.setTexture(this->t1);
+
                             i++;
                             std::cout << i << "\n";
                             break;
                         case 2:
-                            temp.loadFromFile("../Images/snipper.png");
-                            item2.sprite.setTexture(temp);
+                             temp.loadFromFile("../Images/snipper.png");
+                             item2.sprite.setTexture(temp);
+                           // item2.sprite.setScale(0.8f,0.8f);
+                           // item2.sprite.setTexture(this->t2);
                             i++;
                             std::cout << i << "\n";
                             break;
                         case 3:
                             temp.loadFromFile("../Images/drmarry.png");
                             item2.sprite.setTexture(temp);
+                          //  item2.sprite.setScale(0.8f,0.8f);
+                          //  item2.sprite.setTexture(this->t3);
                             i++;
                             std::cout << i << "\n";
                             break;
                         case 4:
                             temp.loadFromFile("../Images/kratos.png");
                             item2.sprite.setTexture(temp);
+                          //  item2.sprite.setScale(0.8f,0.8f);
+                          //  item2.sprite.setTexture(this->t4);
                             i++;
                             std::cout << i << "\n";
                             break;
                         case 5:
                             temp.loadFromFile("../Images/alphaman.png");
                             item2.sprite.setTexture(temp);
+                          //  item2.sprite.setScale(0.8f,0.8f);
+                         //   item2.sprite.setTexture(this->t5);
                             i++;
                             std::cout << i << "\n";
                             break;
                         case 6:
                             temp.loadFromFile("../Images/leon.png");
                             item2.sprite.setTexture(temp);
+                         //   item2.sprite.setScale(0.8f,0.8f);
+                          //  item2.sprite.setTexture(this->t6);
                             i++;
                             std::cout << i << "\n";
                             break;
                         case 7:
                             temp.loadFromFile("../Images/commander.png");
                             item2.sprite.setTexture(temp);
+                          //  item2.sprite.setScale(0.8f,0.8f);
+                          //  item2.sprite.setTexture(this->t7);
                             i++;
                             std::cout << i << "\n";
                             break;
                         case 8:
-                            temp.loadFromFile("../Images/robi.png");
+                           temp.loadFromFile("../Images/robi.png");
                             item2.sprite.setTexture(temp);
+                           // item2.sprite.setScale(0.8f,0.8f);
+                          //  item2.sprite.setTexture(this->t8);
                             i++;
                             std::cout << i << "\n";
                             break;
                         case 9:
-                            temp.loadFromFile("../Images/mrsghost.png");
-                            item2.sprite.setTexture(temp);
+                           temp.loadFromFile("../Images/mrsghost.png");
+                           item2.sprite.setTexture(temp);
+                          //  item2.sprite.setScale(0.8f,0.8f);
+                          //  item2.sprite.setTexture(this->t9);
                             i++;
+
                             std::cout << i << "\n";
                             break;
                         case 10:
                             temp.loadFromFile("../Images/professor.png");
                             item2.sprite.setTexture(temp);
+                        //    item2.sprite.setScale(0.8f,0.8f);
+                       //     item2.sprite.setTexture(this->t10);
                             i++;
                             std::cout << i << "\n";
                             break;
@@ -595,7 +663,7 @@ void GameState::selectTileForHero()
                             break;
 
                         }
-
+                        std::cout << this->Entity1.size() << " " << this->Heroes.size() << std::endl;
                         if (i == 5)
                         {
                             this->Status2 = false;
@@ -611,6 +679,37 @@ void GameState::selectTileForHero()
     }
 
 
+}
+
+void GameState::Play()
+{
+    sf::Event event;
+    while (this->window->pollEvent(event))
+    {
+        for (auto &item1 : this->Entity1)
+        {
+            if (item1->Hero.getGlobalBounds().contains(this->MousePositionView))
+            {
+                if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                {
+
+
+                    std::cout << "Start2\n";
+                    for (auto &item2 : this->Tiles2)
+                    {
+                        for (auto &item3 : item2)
+                        {
+                            std::cout << "Start3\n";
+                            if (item3.sprite.getGlobalBounds().contains(this->MousePositionView))
+                            {
+                                std::cout << "Start\n";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 void GameState::selectHero2()
