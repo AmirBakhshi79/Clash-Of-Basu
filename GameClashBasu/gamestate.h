@@ -46,6 +46,10 @@ public:
     bool startGane = false;
     bool Status4 = true;
     bool Status5 = false;
+
+
+
+    bool status = false;
     unsigned short int x = 0;
     unsigned short int y = 0;
     float position11;
