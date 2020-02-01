@@ -844,7 +844,23 @@ void GameState::Play()
                 if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
                 {
 
-
+                    sf::Event event1;
+                    while (this->window->pollEvent(event1))
+                    {
+                        for (auto &i : this->Tiles2)
+                        {
+                            for (auto &j : i)
+                            {
+                                if (j.sprite.getGlobalBounds().contains(this->MousePositionView))
+                                {
+                                    if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                                    {
+                                        std::cout << "S\n";
+                                    }
+                                }
+                            }
+                        }
+                    }
 
                 }
             }
