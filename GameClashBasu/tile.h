@@ -29,7 +29,7 @@ public:
     void setPosition(float x, float y);
     void setTexture(sf::Texture& Temp);
     void render(sf::RenderTarget* target);
-
+    int getIdentifyNum();
 
     void setColor(sf::Color Color);
 };

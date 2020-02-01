@@ -117,6 +117,12 @@ void GameState::selectTile()
 
 }
 
+void GameState::chooseTileForAttack()
+{
+
+
+}
+
 
 void GameState::update(const float& dt)
 {
@@ -308,8 +314,8 @@ void GameState::initTiles()
             y = y + 51;
             item2.y = identifyNum;
             identifyNum++;
-            //std::cout << item2.y << std::endl;
-            //std::cout << item2.y << std::endl;
+          //  std::cout << item2.y << std::endl;
+          //  std::cout << item2.y << std::endl;
         }
         ::x = ::x + 51;
         y = 550;
@@ -543,6 +549,7 @@ void GameState::selectTileForHero2()
                             //this->updateTiles();
                             this->updateTiles();
                             this->selectTile();
+                            this->startGane = true;
 
                             break;
                         }
@@ -581,7 +588,7 @@ void GameState::selectTileForHero()
                              temp.loadFromFile("../Images/giant.png");
                              item2.sprite.setTexture(temp);
                             // item2.sprite.setScale(0.7f,0.7f);
-                           // item2.sprite.setTexture(this->t1);
+                            // item2.sprite.setTexture(this->t1);
 
                             i++;
                             std::cout << i << "\n";
@@ -692,20 +699,9 @@ void GameState::Play()
             {
                 if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
                 {
+                    std::cout << "Ssss\n";
+                    this->chooseTileForAttack();
 
-
-                    std::cout << "Start2\n";
-                    for (auto &item2 : this->Tiles2)
-                    {
-                        for (auto &item3 : item2)
-                        {
-                            std::cout << "Start3\n";
-                            if (item3.sprite.getGlobalBounds().contains(this->MousePositionView))
-                            {
-                                std::cout << "Start\n";
-                            }
-                        }
-                    }
                 }
             }
         }

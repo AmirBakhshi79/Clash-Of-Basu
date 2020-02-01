@@ -70,6 +70,11 @@ void Tile::render(sf::RenderTarget *target)
     target->draw(this->sprite);
 }
 
+int Tile::getIdentifyNum()
+{
+    return this->y;
+}
+
 void Tile::setColor(sf::Color Color)
 {
     this->sprite.setColor(Color);

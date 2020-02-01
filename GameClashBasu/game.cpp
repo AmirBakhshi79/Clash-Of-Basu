@@ -83,8 +83,10 @@ void Game::initStates()
 void Game::initSupportedKeys()
 {
     this->SupportedKeys.emplace("Escape" , sf::Keyboard::Escape);
+    /*
     this->SupportedKeys.emplace("A" , sf::Keyboard::A);
     this->SupportedKeys.emplace("D" , sf::Keyboard::D);
     this->SupportedKeys.emplace("W" , sf::Keyboard::W);
     this->SupportedKeys.emplace("S" , sf::Keyboard::S);
+    */
 }

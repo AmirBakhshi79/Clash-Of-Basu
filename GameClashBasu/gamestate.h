@@ -79,6 +79,7 @@ public:
 
     void selectTile();
 
+    void chooseTileForAttack();
 
     sf::Texture t1;
     sf::Texture t2;
