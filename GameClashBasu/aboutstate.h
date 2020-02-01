@@ -2,13 +2,14 @@
 #define ABOUTSTATE_H
 
 #include "game.h"
-
+#include "gamestate.h"
 class AboutState : public State
 {
 
 private:
     sf::RectangleShape Background;
     sf::Texture BGtexture;
+    std::vector <Entity*> Icons;
 public:
     AboutState(sf::RenderWindow* window , std::map<std::string, int>* SupportedKeys, std::stack<State*>* states);
     ~AboutState();
