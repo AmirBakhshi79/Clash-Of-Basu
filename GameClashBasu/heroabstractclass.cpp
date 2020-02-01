@@ -12,6 +12,12 @@ int HeroAbstractClass::getPower()
 
 }
 
+void HeroAbstractClass::Damage(int x)
+{
+    this->Health = this->Health - x;
+
+}
+
 void HeroAbstractClass::setTexture(std::string FileName)
 {
     const char* FN = FileName.c_str();

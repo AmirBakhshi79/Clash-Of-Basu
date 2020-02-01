@@ -78,7 +78,8 @@ SOURCES       = ../GameClashBasu/main.cpp \
 		../GameClashBasu/alphamanhero.cpp \
 		../GameClashBasu/professorhero.cpp \
 		../GameClashBasu/leonhero.cpp \
-		../GameClashBasu/drmarryhero.cpp 
+		../GameClashBasu/drmarryhero.cpp \
+		../GameClashBasu/aboutstate.cpp 
 OBJECTS       = main.o \
 		game.o \
 		state.o \
@@ -107,7 +108,8 @@ OBJECTS       = main.o \
 		alphamanhero.o \
 		professorhero.o \
 		leonhero.o \
-		drmarryhero.o
+		drmarryhero.o \
+		aboutstate.o
 DIST          = /home/bakhshi/Qt5.11.0/5.11.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/bakhshi/Qt5.11.0/5.11.0/gcc_64/mkspecs/common/unix.conf \
 		/home/bakhshi/Qt5.11.0/5.11.0/gcc_64/mkspecs/common/linux.conf \
@@ -319,7 +321,8 @@ DIST          = /home/bakhshi/Qt5.11.0/5.11.0/gcc_64/mkspecs/features/spec_pre.p
 		alphamanhero.h \
 		professorhero.h \
 		leonhero.h \
-		drmarryhero.h ../GameClashBasu/main.cpp \
+		drmarryhero.h \
+		aboutstate.h ../GameClashBasu/main.cpp \
 		../GameClashBasu/game.cpp \
 		../GameClashBasu/state.cpp \
 		../GameClashBasu/gamestate.cpp \
@@ -347,7 +350,8 @@ DIST          = /home/bakhshi/Qt5.11.0/5.11.0/gcc_64/mkspecs/features/spec_pre.p
 		../GameClashBasu/alphamanhero.cpp \
 		../GameClashBasu/professorhero.cpp \
 		../GameClashBasu/leonhero.cpp \
-		../GameClashBasu/drmarryhero.cpp
+		../GameClashBasu/drmarryhero.cpp \
+		../GameClashBasu/aboutstate.cpp
 QMAKE_TARGET  = GameClashBasu
 DESTDIR       = 
 TARGET        = GameClashBasu
@@ -863,7 +867,17 @@ main.o: ../GameClashBasu/main.cpp ../GameClashBasu/game.h \
 		../GameClashBasu/button.h \
 		../GameClashBasu/gamestate.h \
 		../GameClashBasu/gianthero.h \
-		../GameClashBasu/heroabstractclass.h
+		../GameClashBasu/heroabstractclass.h \
+		../GameClashBasu/snipperhero.h \
+		../GameClashBasu/mrsghosthero.h \
+		../GameClashBasu/drmarryhero.h \
+		../GameClashBasu/professorhero.h \
+		../GameClashBasu/kratoshero.h \
+		../GameClashBasu/leonhero.h \
+		../GameClashBasu/alphamanhero.h \
+		../GameClashBasu/robihero.h \
+		../GameClashBasu/commanderhero.h \
+		../GameClashBasu/aboutstate.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../GameClashBasu/main.cpp
 
 game.o: ../GameClashBasu/game.cpp ../GameClashBasu/game.h \
@@ -958,7 +972,17 @@ game.o: ../GameClashBasu/game.cpp ../GameClashBasu/game.h \
 		../GameClashBasu/button.h \
 		../GameClashBasu/gamestate.h \
 		../GameClashBasu/gianthero.h \
-		../GameClashBasu/heroabstractclass.h
+		../GameClashBasu/heroabstractclass.h \
+		../GameClashBasu/snipperhero.h \
+		../GameClashBasu/mrsghosthero.h \
+		../GameClashBasu/drmarryhero.h \
+		../GameClashBasu/professorhero.h \
+		../GameClashBasu/kratoshero.h \
+		../GameClashBasu/leonhero.h \
+		../GameClashBasu/alphamanhero.h \
+		../GameClashBasu/robihero.h \
+		../GameClashBasu/commanderhero.h \
+		../GameClashBasu/aboutstate.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o game.o ../GameClashBasu/game.cpp
 
 state.o: ../GameClashBasu/state.cpp ../GameClashBasu/state.h \
@@ -1139,7 +1163,16 @@ gamestate.o: ../GameClashBasu/gamestate.cpp ../GameClashBasu/gamestate.h \
 		../GameClashBasu/robi.h \
 		../GameClashBasu/alphaman.h \
 		../GameClashBasu/gianthero.h \
-		../GameClashBasu/heroabstractclass.h
+		../GameClashBasu/heroabstractclass.h \
+		../GameClashBasu/snipperhero.h \
+		../GameClashBasu/mrsghosthero.h \
+		../GameClashBasu/drmarryhero.h \
+		../GameClashBasu/professorhero.h \
+		../GameClashBasu/kratoshero.h \
+		../GameClashBasu/leonhero.h \
+		../GameClashBasu/alphamanhero.h \
+		../GameClashBasu/robihero.h \
+		../GameClashBasu/commanderhero.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gamestate.o ../GameClashBasu/gamestate.cpp
 
 entity.o: ../GameClashBasu/entity.cpp ../GameClashBasu/entity.h \
@@ -1311,7 +1344,17 @@ mainmenu.o: ../GameClashBasu/mainmenu.cpp ../GameClashBasu/mainmenu.h \
 		../GameClashBasu/button.h \
 		../GameClashBasu/gamestate.h \
 		../GameClashBasu/gianthero.h \
-		../GameClashBasu/heroabstractclass.h
+		../GameClashBasu/heroabstractclass.h \
+		../GameClashBasu/snipperhero.h \
+		../GameClashBasu/mrsghosthero.h \
+		../GameClashBasu/drmarryhero.h \
+		../GameClashBasu/professorhero.h \
+		../GameClashBasu/kratoshero.h \
+		../GameClashBasu/leonhero.h \
+		../GameClashBasu/alphamanhero.h \
+		../GameClashBasu/robihero.h \
+		../GameClashBasu/commanderhero.h \
+		../GameClashBasu/aboutstate.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainmenu.o ../GameClashBasu/mainmenu.cpp
 
 button.o: ../GameClashBasu/button.cpp ../GameClashBasu/button.h \
@@ -3114,6 +3157,83 @@ drmarryhero.o: ../GameClashBasu/drmarryhero.cpp ../GameClashBasu/drmarryhero.h \
 		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
 		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o drmarryhero.o ../GameClashBasu/drmarryhero.cpp
+
+aboutstate.o: ../GameClashBasu/aboutstate.cpp ../GameClashBasu/aboutstate.h \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Config.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Clock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Time.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Err.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/FileInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/InputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/NonCopyable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Lock.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/MemoryInputStream.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Mutex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Sleep.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Utf.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/String.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Thread.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocal.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/ThreadLocalPtr.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector2.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/System/Vector3.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Clipboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Context.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/GlResource.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/ContextSettings.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Cursor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Event.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Joystick.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Keyboard.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Mouse.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Sensor.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Touch.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/VideoMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/Window.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowHandle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Window/WindowStyle.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/BlendMode.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Export.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/CircleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Drawable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderStates.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transform.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Rect.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Transformable.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexArray.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Vertex.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Color.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/PrimitiveType.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/ConvexShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Font.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glyph.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Texture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Image.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RectangleShape.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTarget.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/View.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderTexture.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/RenderWindow.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Shader.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Glsl.inl \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Sprite.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/Text.hpp \
+		/home/bakhshi/Downloads/SFML-2.5.1-Compiled/include/SFML/Graphics/VertexBuffer.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o aboutstate.o ../GameClashBasu/aboutstate.cpp
 
 ####### Install
 

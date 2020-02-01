@@ -21,6 +21,7 @@ public:
     sf::Sprite Hero;
     int getHealth();
     int getPower();
+    void Damage(int x);
     void setTexture(std::string FileName);
     virtual void setAttribute() = 0;
 

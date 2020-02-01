@@ -64,6 +64,10 @@ void MainMenu::updateButtons()
     {
         this->states->push(new GameState(this->window, this->SupportedKeys, this->states));
     }
+    if (this->buttons["ABOUT_STATE"]->isPressed())
+    {
+        this->states->push(new AboutState(this->window, this->SupportedKeys, this->states));
+    }
     if (this->buttons["EXIT_STATE"]->isPressed())
     {
         this->endState();

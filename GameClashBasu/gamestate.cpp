@@ -67,7 +67,7 @@ void GameState::updateTiles()
     {
         for (auto &item2 : item1)
         {
-            if (item2.sprite.getColor() != sf::Color::White || item2.sprite.getColor() == sf::Color::Blue)
+            if (item2.sprite.getColor() != sf::Color::White)
             {
                 item2.setColor(sf::Color::White);
                 sf::Texture temp;
@@ -147,6 +147,7 @@ void GameState::update(const float& dt)
     }
     if (this->Status4)
     {
+
         this->selectHero2();
     }
     if (this->Status5)
@@ -155,6 +156,7 @@ void GameState::update(const float& dt)
     }
     if (this->startGane)
     {
+
         this->Play();
     }
 
@@ -182,6 +184,8 @@ GameState::~GameState()
         delete this->Entity2.at(i);
         this->Entity2.erase(this->Entity2.begin() + i);
     }
+
+
    // std::cout<< static_cast <float>(this->Tiles[0][0].sprite.getScale()) << std::endl;
     //std::cout << this->Entities.size() << std::endl;
 
@@ -469,12 +473,14 @@ void GameState::selectTileForHero2()
             {
                 if (item2.sprite.getGlobalBounds().contains(this->MousePositionView))
                 {
+
                     if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
                     {
 
 
                         sf::Texture temp;
-                        switch (this->Heroes2.at(j)) {
+                        switch (this->Heroes2.at(j))
+                        {
                         case 1:
                             temp.loadFromFile("../Images/giant.png");
                             item2.sprite.setTexture(temp);
@@ -570,42 +576,53 @@ void GameState::selectTileForHero2()
                                         case GIANTH:
                                             n.sprite.setScale(0.8f,0.8f);
                                             n.sprite.setTexture(this->t1);
+
                                             break;
                                         case SNIPPERH:
                                             n.sprite.setScale(0.8f,0.8f);
                                             n.sprite.setTexture(this->t2);
+
                                             break;
                                         case COMMANDERH:
                                             n.sprite.setScale(0.8f,0.8f);
                                             n.sprite.setTexture(this->t7);
+
                                             break;
                                         case KRATOSH:
                                             n.sprite.setScale(0.8f,0.8f);
                                             n.sprite.setTexture(this->t4);
+
                                             break;
                                         case LEONH:
                                             n.sprite.setScale(0.8f,0.8f);
                                             n.sprite.setTexture(this->t6);
+
                                             break;
                                         case DRMARRYH:
                                             n.sprite.setScale(0.8f,0.8f);
                                             n.sprite.setTexture(this->t3);
+
                                             break;
                                         case MRSGHOSTH:
                                             n.sprite.setScale(0.8f,0.8f);
                                             n.sprite.setTexture(this->t9);
+
                                             break;
                                         case ROBIH:
                                             n.sprite.setScale(0.8f,0.8f);
                                             n.sprite.setTexture(this->t8);
+
                                             break;
                                         case ALPHAMANH:
                                             n.sprite.setScale(0.8f,0.8f);
                                             n.sprite.setTexture(this->t5);
+
                                             break;
                                         case PROFESSORH:
                                             n.sprite.setScale(0.8f,0.8f);
                                             n.sprite.setTexture(this->t10);
+
+                                            std::cout << n.y << "\n";
                                             break;
                                         default:
                                             break;
@@ -826,8 +843,8 @@ void GameState::Play()
             {
                 if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
                 {
-                    std::cout << "Ssss\n";
-                    this->chooseTileForAttack();
+
+
 
                 }
             }

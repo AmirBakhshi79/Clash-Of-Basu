@@ -32,7 +32,8 @@ SOURCES += \
     alphamanhero.cpp \
     professorhero.cpp \
     leonhero.cpp \
-    drmarryhero.cpp
+    drmarryhero.cpp \
+    aboutstate.cpp
 
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../../../home/bakhshi/Downloads/SFML-2.5.1-Compiled/lib/release/ -lsfml-graphics
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../../../home/bakhshi/Downloads/SFML-2.5.1-Compiled/lib/debug/ -lsfml-graphics
@@ -84,4 +85,5 @@ HEADERS += \
     alphamanhero.h \
     professorhero.h \
     leonhero.h \
-    drmarryhero.h
+    drmarryhero.h \
+    aboutstate.h

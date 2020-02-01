@@ -15,11 +15,12 @@ enum HeroTexture {NOT = 0, GIANTH, SNIPPERH, DRMARRYH, COMMANDERH, MRSGHOSTH, KR
 class Tile
 {
 private:
-    sf::Texture texture;
+
     sf::Color Colori = sf::Color::White;
     sf::Color Colorii = sf::Color::Red;
     sf::Color Coloriii = sf::Color::Blue;
 public:
+    sf::Texture texture;
     int y;
     Tile();
     sf::Sprite sprite;
