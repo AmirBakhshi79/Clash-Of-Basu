@@ -9,7 +9,7 @@ private:
 public:
     KratosHero(std::string FileName, float x, float y);
     void setAttribute();
-    void attack();
+    void attack(HeroAbstractClass* , int);
 };
 
 #endif // KRATOSHERO_H

@@ -9,7 +9,7 @@ private:
 public:
     AlphaManHero(std::string FileName, float x, float y);
     void setAttribute();
-    void attack();
+    void attack(HeroAbstractClass* , int);
 };
 
 #endif // ALPHAMANHERO_H

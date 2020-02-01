@@ -9,7 +9,7 @@ private:
 public:
     ROBIHero(std::string FileName, float x, float y);
     void setAttribute();
-    void attack();
+    void attack(HeroAbstractClass* , int);
 };
 
 #endif // ROBIHERO_H

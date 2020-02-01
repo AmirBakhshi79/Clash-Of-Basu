@@ -9,7 +9,7 @@ private:
 public:
     ProfessorHero(std::string FileName, float x, float y);
     void setAttribute();
-    void attack();
+    void attack(HeroAbstractClass* , int);
 };
 
 #endif // PROFESSORHERO_H

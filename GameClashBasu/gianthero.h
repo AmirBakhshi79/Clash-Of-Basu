@@ -9,7 +9,7 @@ private:
 public:
     void setAttribute();
     GiantHero(std::string FileName, float x, float y);
-    void attack();
+    void attack(HeroAbstractClass* , int);
 };
 
 #endif // GIANTHERO_H
