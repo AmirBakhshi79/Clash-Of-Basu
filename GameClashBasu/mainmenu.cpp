@@ -18,7 +18,7 @@ void MainMenu::render(sf::RenderTarget* target)
 void MainMenu::update(const float& dt)
 {
     this->updateMousePosition();
-    //this->updateInput(dt);
+    this->updateInput(dt);
     this->updateButtons();
     //this->renderButtons(this->window);
 

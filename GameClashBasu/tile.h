@@ -10,6 +10,7 @@
 
 
 enum TileColor {TL_COLORI = 0, TL_COLORII, TL_COLORIII};
+enum HeroTexture {NOT = 0, GIANTH, SNIPPERH, DRMARRYH, COMMANDERH, MRSGHOSTH, KRATOSH, ROBIH, LEONH, ALPHAMANH, PROFESSORH};
 
 class Tile
 {
@@ -23,6 +24,9 @@ public:
     Tile();
     sf::Sprite sprite;
     TileColor gridColor;
+
+
+    HeroTexture HeroesTexture;
     const bool isColoriii();
     void updateTexture(sf::Texture& t);
     void updateTilesIcons(sf::Vector2f& MousePosition);

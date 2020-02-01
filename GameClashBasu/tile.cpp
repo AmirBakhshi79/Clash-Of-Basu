@@ -10,6 +10,7 @@ Tile::Tile()
     this->sprite.setScale(0.1f,0.1f);
     //this->sprite.setColor(sf::Color::White);
     this->gridColor = TL_COLORI;
+    this->HeroesTexture = NOT;
 
 }
 

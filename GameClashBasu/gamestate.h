@@ -14,7 +14,7 @@
 #include "alphamanhero.h"
 #include "robihero.h"
 #include "commanderhero.h"
-
+#include "tile.h"
 
 
 static float x;

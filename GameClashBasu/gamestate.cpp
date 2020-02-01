@@ -374,7 +374,7 @@ void GameState::selectHero()
                         this->Heroes.push_back(1);
                         std::cout << "GIANT  "<<this->Heroes.size()<<"\n";
                         this->Entity1.push_back(new GiantHero("../Images/giant.png" , this->position11, ::position12));
-                        std::cout << this->position11 << std::endl;
+
                       //  this->Entities.erase(this->Entities.begin() + 0);
 
                         break;
@@ -478,61 +478,70 @@ void GameState::selectTileForHero2()
                         case 1:
                             temp.loadFromFile("../Images/giant.png");
                             item2.sprite.setTexture(temp);
+                            item2.HeroesTexture = GIANTH;
                             j++;
                             std::cout << j << "\n";
                             break;
                         case 2:
                             temp.loadFromFile("../Images/snipper.png");
                             item2.sprite.setTexture(temp);
+                            item2.HeroesTexture = SNIPPERH;
                             j++;
                             std::cout << j << "\n";
                             break;
                         case 3:
                             temp.loadFromFile("../Images/drmarry.png");
                             item2.sprite.setTexture(temp);
+                            item2.HeroesTexture = DRMARRYH;
                             j++;
                             std::cout << j << "\n";
                             break;
                         case 4:
                             temp.loadFromFile("../Images/kratos.png");
                             item2.sprite.setTexture(temp);
+                            item2.HeroesTexture = KRATOSH;
                             j++;
                             std::cout << j << "\n";
                             break;
                         case 5:
                             temp.loadFromFile("../Images/alphaman.png");
                             item2.sprite.setTexture(temp);
+                            item2.HeroesTexture = ALPHAMANH;
                             j++;
                             std::cout << j << "\n";
                             break;
                         case 6:
                             temp.loadFromFile("../Images/leon.png");
                             item2.sprite.setTexture(temp);
+                            item2.HeroesTexture = LEONH;
                             j++;
                             std::cout << j << "\n";
                             break;
                         case 7:
                             temp.loadFromFile("../Images/commander.png");
                             item2.sprite.setTexture(temp);
+                            item2.HeroesTexture = COMMANDERH;
                             j++;
                             std::cout << j << "\n";
                             break;
                         case 8:
                             temp.loadFromFile("../Images/robi.png");
                             item2.sprite.setTexture(temp);
+                            item2.HeroesTexture = ROBIH;
                             j++;
                             std::cout << j << "\n";
                             break;
                         case 9:
                             temp.loadFromFile("../Images/mrsghost.png");
                             item2.sprite.setTexture(temp);
-
+                            item2.HeroesTexture = MRSGHOSTH;
                             j++;
                             std::cout << j << "\n";
                             break;
                         case 10:
                             temp.loadFromFile("../Images/professor.png");
                             item2.sprite.setTexture(temp);
+                            item2.HeroesTexture = PROFESSORH;
                             j++;
                             std::cout << j << "\n";
                             break;
@@ -550,7 +559,60 @@ void GameState::selectTileForHero2()
                             this->updateTiles();
                             this->selectTile();
                             this->startGane = true;
-
+                            for (auto &m : this->Tiles2)
+                            {
+                                for (auto &n : m)
+                                {
+                                    if (n.HeroesTexture != NOT)
+                                    {
+                                        switch (n.HeroesTexture)
+                                        {
+                                        case GIANTH:
+                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setTexture(this->t1);
+                                            break;
+                                        case SNIPPERH:
+                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setTexture(this->t2);
+                                            break;
+                                        case COMMANDERH:
+                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setTexture(this->t7);
+                                            break;
+                                        case KRATOSH:
+                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setTexture(this->t4);
+                                            break;
+                                        case LEONH:
+                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setTexture(this->t6);
+                                            break;
+                                        case DRMARRYH:
+                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setTexture(this->t3);
+                                            break;
+                                        case MRSGHOSTH:
+                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setTexture(this->t9);
+                                            break;
+                                        case ROBIH:
+                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setTexture(this->t8);
+                                            break;
+                                        case ALPHAMANH:
+                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setTexture(this->t5);
+                                            break;
+                                        case PROFESSORH:
+                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setTexture(this->t10);
+                                            break;
+                                        default:
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
                             break;
                         }
 
@@ -587,7 +649,8 @@ void GameState::selectTileForHero()
                         case 1:
                              temp.loadFromFile("../Images/giant.png");
                              item2.sprite.setTexture(temp);
-                            // item2.sprite.setScale(0.7f,0.7f);
+                             item2.HeroesTexture = GIANTH;
+                             //item2.sprite.setScale(0.7f,0.7f);
                             // item2.sprite.setTexture(this->t1);
 
                             i++;
@@ -596,6 +659,7 @@ void GameState::selectTileForHero()
                         case 2:
                              temp.loadFromFile("../Images/snipper.png");
                              item2.sprite.setTexture(temp);
+                             item2.HeroesTexture = SNIPPERH;
                            // item2.sprite.setScale(0.8f,0.8f);
                            // item2.sprite.setTexture(this->t2);
                             i++;
@@ -604,6 +668,7 @@ void GameState::selectTileForHero()
                         case 3:
                             temp.loadFromFile("../Images/drmarry.png");
                             item2.sprite.setTexture(temp);
+                            item2.HeroesTexture = DRMARRYH;
                           //  item2.sprite.setScale(0.8f,0.8f);
                           //  item2.sprite.setTexture(this->t3);
                             i++;
@@ -612,6 +677,7 @@ void GameState::selectTileForHero()
                         case 4:
                             temp.loadFromFile("../Images/kratos.png");
                             item2.sprite.setTexture(temp);
+                            item2.HeroesTexture = KRATOSH;
                           //  item2.sprite.setScale(0.8f,0.8f);
                           //  item2.sprite.setTexture(this->t4);
                             i++;
@@ -620,6 +686,7 @@ void GameState::selectTileForHero()
                         case 5:
                             temp.loadFromFile("../Images/alphaman.png");
                             item2.sprite.setTexture(temp);
+                            item2.HeroesTexture = ALPHAMANH;
                           //  item2.sprite.setScale(0.8f,0.8f);
                          //   item2.sprite.setTexture(this->t5);
                             i++;
@@ -628,6 +695,7 @@ void GameState::selectTileForHero()
                         case 6:
                             temp.loadFromFile("../Images/leon.png");
                             item2.sprite.setTexture(temp);
+                            item2.HeroesTexture = LEONH;
                          //   item2.sprite.setScale(0.8f,0.8f);
                           //  item2.sprite.setTexture(this->t6);
                             i++;
@@ -636,6 +704,7 @@ void GameState::selectTileForHero()
                         case 7:
                             temp.loadFromFile("../Images/commander.png");
                             item2.sprite.setTexture(temp);
+                            item2.HeroesTexture = COMMANDERH;
                           //  item2.sprite.setScale(0.8f,0.8f);
                           //  item2.sprite.setTexture(this->t7);
                             i++;
@@ -644,6 +713,7 @@ void GameState::selectTileForHero()
                         case 8:
                            temp.loadFromFile("../Images/robi.png");
                             item2.sprite.setTexture(temp);
+                            item2.HeroesTexture = ROBIH;
                            // item2.sprite.setScale(0.8f,0.8f);
                           //  item2.sprite.setTexture(this->t8);
                             i++;
@@ -652,6 +722,7 @@ void GameState::selectTileForHero()
                         case 9:
                            temp.loadFromFile("../Images/mrsghost.png");
                            item2.sprite.setTexture(temp);
+                           item2.HeroesTexture = MRSGHOSTH;
                           //  item2.sprite.setScale(0.8f,0.8f);
                           //  item2.sprite.setTexture(this->t9);
                             i++;
@@ -661,6 +732,7 @@ void GameState::selectTileForHero()
                         case 10:
                             temp.loadFromFile("../Images/professor.png");
                             item2.sprite.setTexture(temp);
+                            item2.HeroesTexture = PROFESSORH;
                         //    item2.sprite.setScale(0.8f,0.8f);
                        //     item2.sprite.setTexture(this->t10);
                             i++;
@@ -675,6 +747,61 @@ void GameState::selectTileForHero()
                         {
                             this->Status2 = false;
                            // this->updateTiles();
+
+                            //static int HH = 1;
+                            for (auto &i : this->Tiles1)
+                            {
+                                for (auto &j : i)
+                                {
+                                    switch (j.HeroesTexture)
+                                    {
+                                    case GIANTH:
+                                        j.sprite.setScale(0.8f,0.8f);
+                                        j.sprite.setTexture(this->t1);
+                                        break;
+                                    case SNIPPERH:
+                                        j.sprite.setScale(0.7f,0.7f);
+                                        j.sprite.setTexture(this->t2);
+                                        break;
+                                    case DRMARRYH:
+                                        j.sprite.setScale(0.7f,0.7f);
+                                        j.sprite.setTexture(this->t3);
+                                        break;
+                                    case COMMANDERH:
+                                        j.sprite.setScale(0.8f,0.8f);
+                                        j.sprite.setTexture(this->t7);
+                                        break;
+                                    case LEONH:
+                                        j.sprite.setScale(0.8f,0.8f);
+                                        j.sprite.setTexture(this->t6);
+                                        break;
+                                    case ALPHAMANH:
+                                        j.sprite.setScale(0.8f,0.8f);
+                                        j.sprite.setTexture(this->t5);
+                                        break;
+                                    case ROBIH:
+                                        j.sprite.setScale(0.8f,0.8f);
+                                        j.sprite.setTexture(this->t8);
+                                        break;
+                                    case PROFESSORH:
+                                        j.sprite.setScale(0.8f,0.8f);
+                                        j.sprite.setTexture(this->t10);
+                                        break;
+                                    case MRSGHOSTH:
+                                        j.sprite.setScale(0.8f,0.8f);
+                                        j.sprite.setTexture(this->t9);
+                                        break;
+                                    case KRATOSH:
+                                        j.sprite.setScale(0.8f,0.8f);
+                                        j.sprite.setTexture(this->t4);
+                                    default:
+                                        break;
+                                    }
+                                }
+
+                            }
+                           // std::cout << HH << std::endl;
+
                             break;
                         }
 
