@@ -15,6 +15,7 @@ GameState::GameState(sf::RenderWindow* window , std::map<std::string, int>* Supp
 
 
 
+
     this->t1.loadFromFile("../Images/giant.png");
     this->t2.loadFromFile("../Images/snipper.png");
     this->t3.loadFromFile("../Images/drmarry.png");
@@ -94,32 +95,12 @@ void GameState::updateTiles()
 
 }
 
-/*
-void GameState::selectTile()
-{
-    sf::Event event;
-    while (this->window->pollEvent(event))
-    {
-        for (auto &item1 : this->Tiles1)
-        {
-            for (auto &item2 : item1)
-            {
-                if (item2.sprite.getGlobalBounds().contains(this->MousePositionView))
-                {
-                    if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-                    {
-                        item2.setColor(sf::Color::White);
-                    }
-                }
-            }
-        }
-    }
 
-}
-*/
 void GameState::chooseTileForAttack()
 {
     sf::Event event;
+    bool s = true;
+    bool s1 = true;
     while(this->window->pollEvent(event))
     {
         if (this->whoPlayerAttack == 2)
@@ -130,7 +111,7 @@ void GameState::chooseTileForAttack()
                 {
                     if (item2.sprite.getGlobalBounds().contains(this->MousePositionView))
                     {
-                        for ( unsigned short int i = 1; i <= 1; i++)
+                        if (s)
                         {
                             if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
                             {
@@ -142,6 +123,7 @@ void GameState::chooseTileForAttack()
                                 item2.sprite.setScale(0.1f,0.1f);
 
                                 std::cout << "Clicked" << "\n";
+                                s = false;
                                 this->status = false;
                                 this->startGane = true;
                                 this->whoPlayerAttack = 2;
@@ -160,7 +142,7 @@ void GameState::chooseTileForAttack()
                 {
                     if (item2.sprite.getGlobalBounds().contains(this->MousePositionView))
                     {
-                        for ( unsigned short int i = 1; i <= 1; i++)
+                        if (s1)
                         {
                             if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
                             {
@@ -172,6 +154,7 @@ void GameState::chooseTileForAttack()
                                 item2.sprite.setScale(0.1f,0.1f);
 
                                 std::cout << "Clicked" << "\n";
+                                s1 = false;
                                 this->status = false;
                                 this->startGane = true;
                                 this->whoPlayerAttack = 1;
@@ -183,9 +166,6 @@ void GameState::chooseTileForAttack()
             }
         }
     }
-
-
-
 }
 
 
@@ -248,85 +228,8 @@ GameState::~GameState()
 
 }
 
-void GameState::updateTileIcons()
-{
-
-    for (auto &item : this->Tiles1)
-    {
-        for (auto &item2 : item)
-        {
-            if (item2.sprite.getGlobalBounds().contains(this->MousePositionView))
-            {
-                item2.setColor(sf::Color::Red);
-                if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-                {
-                    item2.setColor(sf::Color::Blue);
-                    for (auto &i : this->Tiles1)
-                    {
-                        for (auto &j : i)
-                        {
-                            if (j.y != item2.y)
-                            {
-                                j.setColor(sf::Color::White);
-                            }
-                        }
-                    }
-                }
-                for (auto &m : this->Tiles1)
-                {
-                    for (auto &n : m)
-                    {
-                        if (n.y != item2.y)
-                        {
-                            n.setColor(sf::Color::White);
-                        }
-                    }
-                }
-
-            }
-        }
-    }
 
 
-    for (auto &counter1 : this->Tiles2)
-    {
-        for (auto &counter2 : counter1)
-        {
-            if (counter2.sprite.getGlobalBounds().contains(this->MousePositionView))
-            {
-               // std::cout << "Im Here\n";
-                counter2.setColor(sf::Color::Red);
-                if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-                {
-                    counter2.setColor(sf::Color::Blue);
-                    for (auto &k : this->Tiles2)
-                    {
-                        for (auto &l : k)
-                        {
-                            if (l.y != counter2.y)
-                            {
-                                l.setColor(sf::Color::White);
-                            }
-                        }
-                    }
-                }
-                for (auto &q : this->Tiles2)
-                {
-                    for (auto &w : q)
-                    {
-                        if (w.y != counter2.y)
-                        {
-                            w.setColor(sf::Color::White);
-                        }
-                    }
-                }
-
-            }
-        }
-    }
-
-
-}
 void GameState::updateIcons()
 {
     for (unsigned short int i = 0; i < this->Entities.size(); i++)
@@ -415,63 +318,53 @@ void GameState::selectHero()
                         std::cout << "GIANT  "<<this->Heroes.size()<<"\n";
                         this->Entity1.push_back(new GiantHero("../Images/giant.png" , this->position11, ::position12));
 
-                      //  this->Entities.erase(this->Entities.begin() + 0);
 
                         break;
                     case SNIPPER:
                         this->Heroes.push_back(2);
                         std::cout << "SNIPPER  "<<this->Heroes.size()<<"\n";
                         this->Entity1.push_back(new SnipperHero("../Images/snipper.png" , this->position11, ::position12));
-                      //  this->Entities.erase(this->Entities.begin() + 1);
                         break;
                     case DRMARRY:
                         this->Heroes.push_back(3);
                         std::cout << "DRMARRY  "<<this->Heroes.size()<<"\n";
                         this->Entity1.push_back(new DrmarryHero("../Images/drmarry.png" , this->position11, ::position12));
-                      //  this->Entities.erase(this->Entities.begin() + 2);
                         break;
                     case KRATOS:
                         this->Heroes.push_back(4);
                         std::cout << "KRATOS  "<<this->Heroes.size()<<"\n";
                         this->Entity1.push_back(new KratosHero("../Images/kratos.png" , this->position11, ::position12));
-                      //  this->Entities.erase(this->Entities.begin() + 3);
                         break;
                     case ALPHAMAN:
                         this->Heroes.push_back(5);
                         std::cout << "ALPHAMAN  "<<this->Heroes.size()<<"\n";
                         this->Entity1.push_back(new AlphaManHero("../Images/alphaman.png" , this->position11, ::position12));
-                       // this->Entities.erase(this->Entities.begin() + 4);
                         break;
                     case LEON:
                         this->Heroes.push_back(6);
                         std::cout << "LEON  "<<this->Heroes.size()<<"\n";
                         this->Entity1.push_back(new LeonHero("../Images/leon.png" , this->position11, ::position12));
-                       // this->Entities.erase(this->Entities.begin() + 5);
                         break;
                     case COMMANDER:
                         this->Heroes.push_back(7);
                         std::cout << "COMMADNER  "<<this->Heroes.size()<<"\n";
                         this->Entity1.push_back(new CommanderHero("../Images/commander.png" , this->position11, ::position12));
-                       // this->Entities.erase(this->Entities.begin() + 6);
                         break;
                     case ROBI:
                         this->Heroes.push_back(8);
                         std::cout << "ROBI  "<<this->Heroes.size()<<"\n";
                         this->Entity1.push_back(new SnipperHero("../Images/robi.png" , this->position11, ::position12));
-                        //this->Entities.erase(this->Entities.begin() + 7);                       
                         break;
 
                     case MRSGHOST:
                         this->Heroes.push_back(9);
                         std::cout << "MRSGHOST  "<<this->Heroes.size()<<"\n";
                         this->Entity1.push_back(new MrsGhostHero("../Images/mrsghost.png" , this->position11, ::position12));
-                        //this->Entities.erase(this->Entities.begin() + 8);
                         break;
                     case PROFESSOR:
                         this->Heroes.push_back(10);
                         std::cout << "PROFESSOR  "<<this->Heroes.size()<<"\n";
                         this->Entity1.push_back(new ProfessorHero("../Images/professor.png" , this->position11, ::position12));
-                        //this->Entities.erase(this->Entities.begin() + 9);
                         break;
 
                     default:
@@ -606,52 +499,52 @@ void GameState::selectTileForHero2()
                                         switch (n.HeroesTexture)
                                         {
                                         case GIANTH:
-                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setScale(0.7f,0.7f);
                                             n.sprite.setTexture(this->t1);
 
                                             break;
                                         case SNIPPERH:
-                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setScale(0.7f,0.7f);
                                             n.sprite.setTexture(this->t2);
 
                                             break;
                                         case COMMANDERH:
-                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setScale(0.7f,0.7f);
                                             n.sprite.setTexture(this->t7);
 
                                             break;
                                         case KRATOSH:
-                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setScale(0.7f,0.7f);
                                             n.sprite.setTexture(this->t4);
 
                                             break;
                                         case LEONH:
-                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setScale(0.7f,0.7f);
                                             n.sprite.setTexture(this->t6);
 
                                             break;
                                         case DRMARRYH:
-                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setScale(0.7f,0.7f);
                                             n.sprite.setTexture(this->t3);
 
                                             break;
                                         case MRSGHOSTH:
-                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setScale(0.7f,0.7f);
                                             n.sprite.setTexture(this->t9);
 
                                             break;
                                         case ROBIH:
-                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setScale(0.7f,0.7f);
                                             n.sprite.setTexture(this->t8);
 
                                             break;
                                         case ALPHAMANH:
-                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setScale(0.7f,0.7f);
                                             n.sprite.setTexture(this->t5);
 
                                             break;
                                         case PROFESSORH:
-                                            n.sprite.setScale(0.8f,0.8f);
+                                            n.sprite.setScale(0.7f,0.7f);
                                             n.sprite.setTexture(this->t10);
 
                                             std::cout << n.y << "\n";
@@ -801,7 +694,7 @@ void GameState::selectTileForHero()
                                     switch (j.HeroesTexture)
                                     {
                                     case GIANTH:
-                                        j.sprite.setScale(0.8f,0.8f);
+                                        j.sprite.setScale(0.7f,0.7f);
                                         j.sprite.setTexture(this->t1);
                                         break;
                                     case SNIPPERH:
@@ -813,31 +706,31 @@ void GameState::selectTileForHero()
                                         j.sprite.setTexture(this->t3);
                                         break;
                                     case COMMANDERH:
-                                        j.sprite.setScale(0.8f,0.8f);
+                                        j.sprite.setScale(0.7f,0.7f);
                                         j.sprite.setTexture(this->t7);
                                         break;
                                     case LEONH:
-                                        j.sprite.setScale(0.8f,0.8f);
+                                        j.sprite.setScale(0.7f,0.7f);
                                         j.sprite.setTexture(this->t6);
                                         break;
                                     case ALPHAMANH:
-                                        j.sprite.setScale(0.8f,0.8f);
+                                        j.sprite.setScale(0.7f,0.7f);
                                         j.sprite.setTexture(this->t5);
                                         break;
                                     case ROBIH:
-                                        j.sprite.setScale(0.8f,0.8f);
+                                        j.sprite.setScale(0.7f,0.7f);
                                         j.sprite.setTexture(this->t8);
                                         break;
                                     case PROFESSORH:
-                                        j.sprite.setScale(0.8f,0.8f);
+                                        j.sprite.setScale(0.7f,0.7f);
                                         j.sprite.setTexture(this->t10);
                                         break;
                                     case MRSGHOSTH:
-                                        j.sprite.setScale(0.8f,0.8f);
+                                        j.sprite.setScale(0.7f,0.7f);
                                         j.sprite.setTexture(this->t9);
                                         break;
                                     case KRATOSH:
-                                        j.sprite.setScale(0.8f,0.8f);
+                                        j.sprite.setScale(0.7f,0.7f);
                                         j.sprite.setTexture(this->t4);
                                     default:
                                         break;

@@ -23,8 +23,6 @@ void AboutState::update(const float &dt)
 {
     this->updateInput(dt);
     this->updateMousePosition();
-
-
 }
 
 void AboutState::render(sf::RenderTarget *target)
@@ -55,9 +53,7 @@ void AboutState::initBackground()
                                  )
                              );
     this->BGtexture.loadFromFile("../Images/FF.jpg");
-
     this->Background.setTexture(&this->BGtexture);
-
 }
 
 void AboutState::initFont()
@@ -66,7 +62,6 @@ void AboutState::initFont()
     {
         std::cout << "Didnt load font from file...";
     }
-
 }
 
 void AboutState::initButtons()

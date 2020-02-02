@@ -57,18 +57,13 @@ public:
     float position11;
     float position21;
 
-
-
-    void fixTileColor();
-
-
     void updateInput(const float& dt);
     void initEntities();
     GameState(sf::RenderWindow* window ,std::map<std::string, int>* SupportedKeys, std::stack<State*>* states);
     ~GameState();
     void updateIcons();
     void initTiles();
-    void updateTileIcons();
+
 
     void selectHero();
 
@@ -77,7 +72,7 @@ public:
 
     void Play();
     void selectHero2();
-    void selectGrid(sf::Texture temp);
+
     virtual void update(const float& dt);
     virtual void render(sf::RenderTarget* target = NULL);
 
