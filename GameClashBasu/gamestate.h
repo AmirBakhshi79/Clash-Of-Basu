@@ -50,6 +50,8 @@ public:
 
 
     bool status = false;
+
+
     unsigned short int x = 0;
     unsigned short int y = 0;
     float position11;
@@ -86,7 +88,7 @@ public:
     void chooseTileForAttack();
 
 
-
+    int whoPlayerAttack = 1;
 
     sf::Texture t1;
     sf::Texture t2;

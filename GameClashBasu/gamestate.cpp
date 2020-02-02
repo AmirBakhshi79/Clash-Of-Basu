@@ -11,8 +11,7 @@ GameState::GameState(sf::RenderWindow* window , std::map<std::string, int>* Supp
     ::position12 = 400;
     this->initEntities();
     this->initTiles();
-   // this->initBackGround();
-
+    this->initBackGround();
 
 
 
@@ -30,7 +29,8 @@ GameState::GameState(sf::RenderWindow* window , std::map<std::string, int>* Supp
 }
 void GameState::render(sf::RenderTarget* target)
 {
-    //this->player.render(target);
+
+    target->draw(this->BackGroound);
     for (auto &item : this->Entities)
     {
         item->render(target);
@@ -89,12 +89,12 @@ void GameState::updateTiles()
                 temp.loadFromFile("../Images/Green.png");
                 item2.setTexture(temp);
             }
-
         }
     }
 
 }
 
+/*
 void GameState::selectTile()
 {
     sf::Event event;
@@ -116,12 +116,78 @@ void GameState::selectTile()
     }
 
 }
-
+*/
 void GameState::chooseTileForAttack()
 {
+    sf::Event event;
+    while(this->window->pollEvent(event))
+    {
+        if (this->whoPlayerAttack == 2)
+        {
+            for (auto &item1 : this->Tiles2)
+            {
+                for (auto &item2 : item1)
+                {
+                    if (item2.sprite.getGlobalBounds().contains(this->MousePositionView))
+                    {
+                        for ( unsigned short int i = 1; i <= 1; i++)
+                        {
+                            if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                            {
+
+                                sf::Texture temp;
+                                temp.loadFromFile("../Images/Yellow.png");
+                                item2.setTexture(temp);
+                                item2.setColor(sf::Color::Yellow);
+                                item2.sprite.setScale(0.1f,0.1f);
+
+                                std::cout << "Clicked" << "\n";
+                                this->status = false;
+                                this->startGane = true;
+                                this->whoPlayerAttack = 2;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else if (this->whoPlayerAttack == 1)
+        {
+            for (auto &item1 : this->Tiles1)
+            {
+                for (auto &item2 : item1)
+                {
+                    if (item2.sprite.getGlobalBounds().contains(this->MousePositionView))
+                    {
+                        for ( unsigned short int i = 1; i <= 1; i++)
+                        {
+                            if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                            {
+
+                                sf::Texture temp;
+                                temp.loadFromFile("../Images/Yellow.png");
+                                item2.setTexture(temp);
+                                item2.setColor(sf::Color::Yellow);
+                                item2.sprite.setScale(0.1f,0.1f);
+
+                                std::cout << "Clicked" << "\n";
+                                this->status = false;
+                                this->startGane = true;
+                                this->whoPlayerAttack = 1;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 
 
 }
+
 
 
 void GameState::update(const float& dt)
@@ -130,13 +196,6 @@ void GameState::update(const float& dt)
     this->updateMousePosition();
     this->updateIcons();
 
-    //this->updateTileIcons();
-/*
-    if (this->Status3)
-    {
-        this->updateTileIcons();
-    }
-    */
     if (this->Status1)
     {
         this->selectHero();
@@ -147,7 +206,6 @@ void GameState::update(const float& dt)
     }
     if (this->Status4)
     {
-
         this->selectHero2();
     }
     if (this->Status5)
@@ -156,15 +214,16 @@ void GameState::update(const float& dt)
     }
     if (this->startGane)
     {
-
         this->Play();
+    }
+    if (this->status)
+    {
+        this->chooseTileForAttack();
     }
 
 
 
 
-    //this->selectWitchIcon();
-    //this->player.update(dt);
 }
 
 GameState::~GameState()
@@ -186,10 +245,7 @@ GameState::~GameState()
     }
 
 
-   // std::cout<< static_cast <float>(this->Tiles[0][0].sprite.getScale()) << std::endl;
-    //std::cout << this->Entities.size() << std::endl;
 
-    //std::cout << this->Entities.at(0)<< std::endl;
 }
 
 void GameState::updateTileIcons()
@@ -278,7 +334,6 @@ void GameState::updateIcons()
         if (this->Entities.at(i)->sprite.getGlobalBounds().contains(this->MousePositionView))
         {
             this->Entities.at(i)->setColor(sf::Color::Red);
-            //std::cout << this->Entities.at(0)->W << " " << this->Entities.at(1)->W << std::endl;
             if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
             {
 
@@ -318,8 +373,7 @@ void GameState::initTiles()
             y = y + 51;
             item2.y = identifyNum;
             identifyNum++;
-          //  std::cout << item2.y << std::endl;
-          //  std::cout << item2.y << std::endl;
+
         }
         ::x = ::x + 51;
         y = 550;
@@ -339,25 +393,7 @@ void GameState::initTiles()
     }
 
 }
-/*
-void GameState::updateTileIcons()
-{
-    for (auto &item1 : this->Tiles1)
-    {
-        for (auto &item2 : item1)
-        {
-            item2.updateTilesIcons(this->MousePositionView);
-        }
-    }
-    for (auto &item1 : this->Tiles2)
-    {
-        for (auto &item2 : item1)
-        {
-            item2.updateTilesIcons(this->MousePositionView);
-        }
-    }
-}
-*/
+
 void GameState::selectHero()
 {
 
@@ -447,8 +483,6 @@ void GameState::selectHero()
                     {
                         this->Status1 = false;
                         this->Status2 = true;
-                        //this->Status3 = false;
-                        //this->updateTiles();
                         this->x = 0;
                         break;
                     }
@@ -463,7 +497,6 @@ void GameState::selectTileForHero2()
 {
     sf::Event event;
     static unsigned short int j = 0;
-    //std::cout << "Enter\n";
     while (this->window->pollEvent(event) && this->y != 5)
     {
 
@@ -561,9 +594,8 @@ void GameState::selectTileForHero2()
                         {
                             this->Status5 = false;
                             this->Status3 = false;
-                            //this->updateTiles();
-                            this->updateTiles();
-                            this->selectTile();
+
+                            //this->selectTile();
                             this->startGane = true;
                             for (auto &m : this->Tiles2)
                             {
@@ -648,7 +680,6 @@ void GameState::selectTileForHero()
 {
     sf::Event event;
     static unsigned short int i = 0;
-    //std::cout << "Enter\n";
     while (this->window->pollEvent(event) && this->y != 5)
     {
 
@@ -763,9 +794,6 @@ void GameState::selectTileForHero()
                         if (i == 5)
                         {
                             this->Status2 = false;
-                           // this->updateTiles();
-
-                            //static int HH = 1;
                             for (auto &i : this->Tiles1)
                             {
                                 for (auto &j : i)
@@ -816,9 +844,8 @@ void GameState::selectTileForHero()
                                     }
                                 }
 
-                            }
-                           // std::cout << HH << std::endl;
 
+                            }
                             break;
                         }
 
@@ -837,14 +864,37 @@ void GameState::Play()
     sf::Event event;
     while (this->window->pollEvent(event))
     {
-        for (auto &item1 : this->Entity1)
+        if (this->whoPlayerAttack == 1)
         {
-            if (item1->Hero.getGlobalBounds().contains(this->MousePositionView))
+            for (auto &item1 : this->Entity1)
             {
-                if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                if (item1->Hero.getGlobalBounds().contains(this->MousePositionView))
                 {
-                    std::cout << "S\n";
 
+                    if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                    {
+                        this->startGane = false;
+                        this->status = true;
+                        this->whoPlayerAttack = 2;
+
+                    }
+                }
+            }
+        }
+        else if (this->whoPlayerAttack == 2)
+        {
+            for (auto &item1 : this->Entity2)
+            {
+                if (item1->Hero.getGlobalBounds().contains(this->MousePositionView))
+                {
+                    if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                    {
+
+                        this->startGane = false;
+                        this->status = true;
+                        this->whoPlayerAttack = 1;
+
+                    }
                 }
             }
         }
@@ -925,8 +975,7 @@ void GameState::selectHero2()
                     {
                         this->Status4 = false;
                         this->Status5 = true;
-                        //this->Status3 = false;
-                       // this->updateTiles();
+
                         break;
                     }
                 }
@@ -936,36 +985,6 @@ void GameState::selectHero2()
 
 
 }
-/*
-void GameState::selectGrid(sf::Texture temp)
-{
-    bool status = true;
-    while(status)
-    {
-        for (auto &item : this->Tiles1)
-        {
-            for (auto &item2 : item)
-            {
-                std::cout << "Im\n";
-                if(item2.sprite.getGlobalBounds().contains(this->MousePositionView))
-                {
-
-                    if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
-                    {
-
-                        item2.setTexture(temp);
-                        status = false;
-                    }
-                }
-            }
-        }
-    }
-}
-
-*/
-
-
-/*
 void GameState::initBackGround()
 {
     this->BackGroound.setSize(sf::Vector2f(
@@ -973,28 +992,18 @@ void GameState::initBackGround()
                                  static_cast<float> (this->window->getSize().y)
                                  )
                              );
-    if (!this->BGtexture.loadFromFile("../Images/BG.jpg"))
+    if (!this->BGtexture.loadFromFile("../Images/GGGG.jpg"))
         std::cout << "H\n";
 
     this->BackGroound.setTexture(&this->BGtexture);
 }
-*/
+
 
 
 
 void GameState::updateInput(const float &dt)
 {
 
-    /*
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-        this->player.move(dt, -1.f, 0.f);
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-        this->player.move(dt, 1.f, 0.f);
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-        this->player.move(dt, 0.f, -1.f);
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-        this->player.move(dt, 0.f, 1.f);
-    */
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
         this->endState();
 }

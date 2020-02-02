@@ -71,16 +71,16 @@ void AboutState::initFont()
 
 void AboutState::initButtons()
 {
-    this->buttons["GIANT"] = new Button(1025, 300, 50, 50, "GIANT", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
-    this->buttons["SNIPPER"] = new Button(1125, 300, 50, 50, "SNIPPER", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
-    this->buttons["KRATOS"] = new Button(1225, 300, 50, 50, "KRATOS", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
-    this->buttons["LEON"] = new Button(1325, 300, 50, 50, "LEON", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
-    this->buttons["DRMARRY"] = new Button(1425, 300, 50, 50, "DRMARRY", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
-    this->buttons["MRSGHOST"] = new Button(1025, 700, 50, 50, "MRSGHOST", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
-    this->buttons["ROBI"] = new Button(1125, 700, 50, 50, "ROBI", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
-    this->buttons["ALPHAMAN"] = new Button(1225, 700, 50, 50, "ALPHAMAN", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
-    this->buttons["PROFESSOR"] = new Button(1325, 700, 50, 50, "PROFESSOR", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
-    this->buttons["COMMANDER"] = new Button(1425, 700, 50, 50, "COMMANDER", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
+    this->buttons["GIANT"] = new Button(1025, 300, 60, 50, "GIANT", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
+    this->buttons["SNIPPER"] = new Button(1125, 300, 60, 50, "SNIPPER", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
+    this->buttons["KRATOS"] = new Button(1225, 300, 60, 50, "KRATOS", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
+    this->buttons["LEON"] = new Button(1325, 300, 60, 50, "LEON", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
+    this->buttons["DRMARRY"] = new Button(1425, 300, 60, 50, "DRMARRY", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
+    this->buttons["MRSGHOST"] = new Button(1025, 700, 60, 50, "MRSGHOST", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
+    this->buttons["ROBI"] = new Button(1125, 700, 60, 50, "ROBI", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
+    this->buttons["ALPHAMAN"] = new Button(1225, 700, 60, 50, "ALPHAMAN", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
+    this->buttons["PROFESSOR"] = new Button(1325, 700, 60, 50, "PROFESSOR", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
+    this->buttons["COMMANDER"] = new Button(1425, 700, 60, 50, "COMMANDER", &this->font, sf::Color(70,70,70,200) , sf::Color(150,150,150,225) , sf::Color(20,20,20,200));
 
 }
 AboutState::~AboutState()
